@@ -1,0 +1,180 @@
+import Link from "next/link";
+
+const quickLinks = [
+  { label: "About", href: "#about" },
+  { label: "Strategy", href: "#strategy" },
+  { label: "Portfolio", href: "#portfolio" },
+  { label: "Team", href: "#team" },
+  { label: "Contact", href: "#contact" },
+];
+
+function LeafIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z" />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+      <rect x="2" y="2" width="20" height="20" rx="5" />
+      <circle cx="12" cy="12" r="5" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z" />
+    </svg>
+  );
+}
+
+function LinkedInIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+      <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z" />
+      <rect x="2" y="9" width="4" height="12" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+}
+
+function XIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
+
+export default function Footer() {
+  return (
+    <footer className="bg-navy-dark text-white">
+      {/* Main Footer Content */}
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-16">
+          {/* Column 1: Brand */}
+          <div className="space-y-6">
+            <Link href="/" className="inline-flex items-center gap-2 group">
+              <LeafIcon className="h-7 w-7 text-gold transition-colors group-hover:text-gold-light" />
+              <span className="font-heading text-2xl font-semibold tracking-wide text-white">
+                SAGO
+              </span>
+            </Link>
+            <p className="max-w-xs text-sm leading-relaxed text-white/60">
+              A fully integrated commercial real estate and investment firm.
+            </p>
+          </div>
+
+          {/* Column 2: Quick Links */}
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40">
+              Quick Links
+            </h3>
+            <ul className="mt-6 space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-white/70 transition-colors duration-200 hover:text-gold"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: Contact */}
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40">
+              Contact
+            </h3>
+            <div className="mt-6 space-y-4">
+              <address className="text-sm leading-relaxed text-white/70 not-italic">
+                4501 Mills Park Circle, Suite 200
+                <br />
+                College Station, Texas 77845
+              </address>
+              <div className="space-y-2">
+                <a
+                  href="mailto:hello@sagocap.com"
+                  className="block text-sm text-white/70 transition-colors duration-200 hover:text-gold"
+                >
+                  hello@sagocap.com
+                </a>
+                <a
+                  href="tel:+18888503708"
+                  className="block text-sm text-white/70 transition-colors duration-200 hover:text-gold"
+                >
+                  (888) 850-3708
+                </a>
+              </div>
+
+              {/* Social Icons */}
+              <div className="flex items-center gap-4 pt-2">
+                {[
+                  { label: "Instagram", icon: <InstagramIcon />, href: "#" },
+                  { label: "Facebook", icon: <FacebookIcon />, href: "#" },
+                  { label: "LinkedIn", icon: <LinkedInIcon />, href: "#" },
+                  { label: "X", icon: <XIcon />, href: "#" },
+                ].map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    aria-label={social.label}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/40 transition-colors duration-200 hover:text-gold"
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Member Logos */}
+        <div className="mt-16 border-t border-white/10 pt-10">
+          <p className="text-center text-[11px] font-semibold uppercase tracking-[0.25em] text-white/30">
+            Proud Members
+          </p>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
+            {["CCIM", "SIOR", "NAIOP"].map((org) => (
+              <span
+                key={org}
+                className="text-sm font-medium tracking-widest text-white/25"
+              >
+                {org}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-white/40 sm:flex-row lg:px-8">
+          <p>&copy; 2026 Sago Capital, LLC</p>
+          <Link
+            href="/terms"
+            className="transition-colors duration-200 hover:text-gold"
+          >
+            Terms of Use
+          </Link>
+        </div>
+      </div>
+    </footer>
+  );
+}
