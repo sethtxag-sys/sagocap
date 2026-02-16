@@ -302,12 +302,12 @@ export default function Home() {
           aria-hidden="true"
           style={{
             background:
-              "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(42,64,96,0.45) 0%, transparent 70%), linear-gradient(180deg, rgba(15,29,48,0.0) 0%, rgba(15,29,48,0.6) 100%)",
+              "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(25,61,120,0.45) 0%, transparent 70%), linear-gradient(180deg, rgba(15,38,84,0.0) 0%, rgba(15,38,84,0.6) 100%)",
           }}
         />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-32 pb-20 text-center lg:px-8">
-          <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-playfair)]">
+          <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-nunito)]">
             Preserving Capital.
             <br />
             Delivering Returns.
@@ -323,7 +323,7 @@ export default function Home() {
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/portfolio"
-              className="inline-block rounded bg-gold px-8 py-3.5 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20 font-[family-name:var(--font-inter)]"
+              className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
             >
               View Our Track Record
             </Link>
@@ -342,7 +342,7 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-4">
               {STATS.map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <p className="stat-number text-3xl font-bold tracking-tight text-gold sm:text-4xl font-[family-name:var(--font-inter)]">
+                  <p className="stat-number text-3xl font-bold tracking-tight text-accent sm:text-4xl font-[family-name:var(--font-inter)]">
                     {stat.value}
                   </p>
                   <p className="mt-1 text-xs font-medium uppercase tracking-widest text-white/50 sm:text-sm font-[family-name:var(--font-inter)]">
@@ -360,10 +360,10 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Section header */}
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold font-[family-name:var(--font-inter)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
               What We Do
             </p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
+            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
               A Fully Integrated CRE Platform
             </h2>
           </div>
@@ -377,15 +377,15 @@ export default function Home() {
               >
                 {/* Gold accent line */}
                 <div
-                  className="absolute inset-x-0 top-0 h-1 bg-gold"
+                  className="absolute inset-x-0 top-0 h-1 bg-accent"
                   aria-hidden="true"
                 />
 
-                <div className="text-navy/70 transition-colors duration-300 group-hover:text-gold">
+                <div className="text-navy/70 transition-colors duration-300 group-hover:text-accent">
                   {service.icon}
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold text-navy font-[family-name:var(--font-playfair)]">
+                <h3 className="mt-6 text-xl font-bold text-navy font-[family-name:var(--font-nunito)]">
                   {service.title}
                 </h3>
 
@@ -404,16 +404,16 @@ export default function Home() {
           <div className="grid items-start gap-16 lg:grid-cols-2 lg:gap-20">
             {/* Left column */}
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold font-[family-name:var(--font-inter)]">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
                 Investment Thesis
               </p>
-              <h2 className="mt-4 text-3xl font-bold leading-snug text-white sm:text-4xl lg:text-[2.75rem] lg:leading-snug font-[family-name:var(--font-playfair)]">
+              <h2 className="mt-4 text-3xl font-bold leading-snug text-white sm:text-4xl lg:text-[2.75rem] lg:leading-snug font-[family-name:var(--font-nunito)]">
                 Since 2020, we&apos;ve used clear, disciplined criteria to guide
                 every investment.
               </h2>
               <Link
                 href="/strategy"
-                className="mt-10 inline-block rounded bg-gold px-8 py-3.5 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20 font-[family-name:var(--font-inter)]"
+                className="mt-10 inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
               >
                 Learn Our Full Strategy
               </Link>
@@ -424,11 +424,11 @@ export default function Home() {
               {PRINCIPLES.map((principle) => (
                 <div key={principle.number} className="flex gap-5">
                   {/* Numbered circle */}
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-gold text-sm font-bold text-gold font-[family-name:var(--font-inter)]">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-accent text-sm font-bold text-accent font-[family-name:var(--font-inter)]">
                     {principle.number}
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white font-[family-name:var(--font-playfair)]">
+                    <h3 className="text-lg font-bold text-white font-[family-name:var(--font-nunito)]">
                       {principle.title}
                     </h3>
                     <p className="mt-1.5 text-sm leading-relaxed text-white/60 font-[family-name:var(--font-inter)]">
@@ -447,10 +447,10 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Section header */}
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold font-[family-name:var(--font-inter)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
               Track Record
             </p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
+            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
               Proven Results for Our Partners
             </h2>
           </div>
@@ -464,14 +464,14 @@ export default function Home() {
               >
                 {/* Card header */}
                 <div className="bg-navy px-6 py-5">
-                  <h3 className="text-lg font-bold tracking-wide text-white font-[family-name:var(--font-playfair)]">
+                  <h3 className="text-lg font-bold tracking-wide text-white font-[family-name:var(--font-nunito)]">
                     {deal.name}
                   </h3>
                 </div>
 
                 {/* Card body */}
                 <div className="bg-white px-6 py-6">
-                  <p className="stat-number text-3xl font-bold text-gold sm:text-4xl font-[family-name:var(--font-inter)]">
+                  <p className="stat-number text-3xl font-bold text-accent sm:text-4xl font-[family-name:var(--font-inter)]">
                     {deal.irr}
                   </p>
                   <p className="mt-0.5 text-xs font-medium uppercase tracking-widest text-slate font-[family-name:var(--font-inter)]">
@@ -518,10 +518,10 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Section header */}
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold font-[family-name:var(--font-inter)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
               Our Team
             </p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
+            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
               Experienced. Disciplined. Invested.
             </h2>
           </div>
@@ -560,7 +560,7 @@ export default function Home() {
                   </svg>
                 </div>
 
-                <h3 className="mt-5 text-lg font-bold text-navy font-[family-name:var(--font-playfair)]">
+                <h3 className="mt-5 text-lg font-bold text-navy font-[family-name:var(--font-nunito)]">
                   {member.name}
                 </h3>
                 <p className="mt-1 text-sm font-medium text-slate font-[family-name:var(--font-inter)]">
@@ -590,12 +590,12 @@ export default function Home() {
           aria-hidden="true"
           style={{
             background:
-              "radial-gradient(ellipse 70% 50% at 50% 50%, rgba(42,64,96,0.3) 0%, transparent 70%)",
+              "radial-gradient(ellipse 70% 50% at 50% 50%, rgba(25,61,120,0.3) 0%, transparent 70%)",
           }}
         />
 
         <div className="relative z-10 mx-auto max-w-3xl px-6 text-center lg:px-8">
-          <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
+          <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
             Ready to Partner With Us?
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/60 font-[family-name:var(--font-inter)]">
@@ -605,7 +605,7 @@ export default function Home() {
           </p>
           <Link
             href="/contact"
-            className="mt-10 inline-block rounded bg-gold px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20 font-[family-name:var(--font-inter)]"
+            className="mt-10 inline-block rounded bg-accent px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
           >
             Get in Touch
           </Link>

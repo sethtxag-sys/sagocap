@@ -23,17 +23,17 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-navy-dark/60 via-transparent to-navy-light/20" />
 
         {/* Decorative accent line */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             {/* Eyebrow */}
-            <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+            <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-accent">
               Contact
             </p>
 
             {/* Heading */}
-            <h1 className="mt-6 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 font-[family-name:var(--font-nunito)] text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
               Get In Touch
             </h1>
 
@@ -45,9 +45,9 @@ export default function ContactPage() {
 
             {/* Decorative divider */}
             <div className="mt-10 flex items-center justify-center gap-3">
-              <span className="h-px w-12 bg-gold/40" />
-              <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              <span className="h-px w-12 bg-gold/40" />
+              <span className="h-px w-12 bg-accent/40" />
+              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+              <span className="h-px w-12 bg-accent/40" />
             </div>
           </div>
         </div>
@@ -59,18 +59,18 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20">
             {/* LEFT COLUMN - Contact Details */}
             <div>
-              <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+              <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-accent">
                 Reach Out
               </p>
 
-              <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight tracking-tight text-navy sm:text-4xl">
+              <h2 className="mt-4 font-[family-name:var(--font-nunito)] text-3xl font-semibold leading-tight tracking-tight text-navy sm:text-4xl">
                 Visit Us
               </h2>
 
               <div className="mt-6 flex items-center gap-3">
-                <span className="h-px w-8 bg-gold/40" />
-                <span className="h-1 w-1 rounded-full bg-gold" />
-                <span className="h-px w-8 bg-gold/40" />
+                <span className="h-px w-8 bg-accent/40" />
+                <span className="h-1 w-1 rounded-full bg-accent" />
+                <span className="h-px w-8 bg-accent/40" />
               </div>
 
               {/* Address */}
@@ -153,7 +153,7 @@ export default function ContactPage() {
                     </p>
                     <a
                       href="mailto:hello@sagocap.com"
-                      className="mt-1 inline-block font-[family-name:var(--font-inter)] text-base text-slate transition-colors duration-200 hover:text-gold"
+                      className="mt-1 inline-block font-[family-name:var(--font-inter)] text-base text-slate transition-colors duration-200 hover:text-accent"
                     >
                       hello@sagocap.com
                     </a>
@@ -182,7 +182,7 @@ export default function ContactPage() {
                     </p>
                     <a
                       href="tel:8888503708"
-                      className="mt-1 inline-block font-[family-name:var(--font-inter)] text-base text-slate transition-colors duration-200 hover:text-gold"
+                      className="mt-1 inline-block font-[family-name:var(--font-inter)] text-base text-slate transition-colors duration-200 hover:text-accent"
                     >
                       888-850-3708
                     </a>
@@ -201,7 +201,7 @@ export default function ContactPage() {
                     href="https://instagram.com/sagocapital"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-navy/10 text-navy/50 transition-all duration-200 hover:border-gold/30 hover:text-gold"
+                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-navy/10 text-navy/50 transition-all duration-200 hover:border-accent/30 hover:text-accent"
                     aria-label="Follow Sago Capital on Instagram"
                   >
                     <svg
@@ -225,7 +225,7 @@ export default function ContactPage() {
                     href="https://linkedin.com/company/sagocapital"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-navy/10 text-navy/50 transition-all duration-200 hover:border-gold/30 hover:text-gold"
+                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-navy/10 text-navy/50 transition-all duration-200 hover:border-accent/30 hover:text-accent"
                     aria-label="Follow Sago Capital on LinkedIn"
                   >
                     <svg
@@ -249,7 +249,7 @@ export default function ContactPage() {
                     href="https://facebook.com/sagocapital"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-navy/10 text-navy/50 transition-all duration-200 hover:border-gold/30 hover:text-gold"
+                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-navy/10 text-navy/50 transition-all duration-200 hover:border-accent/30 hover:text-accent"
                     aria-label="Follow Sago Capital on Facebook"
                   >
                     <svg
@@ -271,7 +271,7 @@ export default function ContactPage() {
                     href="https://x.com/sagocapital"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-navy/10 text-navy/50 transition-all duration-200 hover:border-gold/30 hover:text-gold"
+                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-navy/10 text-navy/50 transition-all duration-200 hover:border-accent/30 hover:text-accent"
                     aria-label="Follow Sago Capital on X"
                   >
                     <svg
@@ -290,7 +290,7 @@ export default function ContactPage() {
             {/* RIGHT COLUMN - Contact Form */}
             <div>
               <div className="rounded-xl border border-navy/5 bg-warm-white p-8 shadow-sm sm:p-10">
-                <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-semibold text-navy">
+                <h3 className="font-[family-name:var(--font-nunito)] text-2xl font-semibold text-navy">
                   Send Us a Message
                 </h3>
                 <p className="mt-2 font-[family-name:var(--font-inter)] text-sm text-slate">
@@ -314,7 +314,7 @@ export default function ContactPage() {
                         name="first-name"
                         autoComplete="given-name"
                         required
-                        className="mt-2 block w-full rounded-lg border border-slate/30 bg-white px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-navy placeholder-slate/40 shadow-sm transition-all duration-200 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20"
+                        className="mt-2 block w-full rounded-lg border border-slate/30 bg-white px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-navy placeholder-slate/40 shadow-sm transition-all duration-200 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                         placeholder="John"
                       />
                     </div>
@@ -332,7 +332,7 @@ export default function ContactPage() {
                         name="last-name"
                         autoComplete="family-name"
                         required
-                        className="mt-2 block w-full rounded-lg border border-slate/30 bg-white px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-navy placeholder-slate/40 shadow-sm transition-all duration-200 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20"
+                        className="mt-2 block w-full rounded-lg border border-slate/30 bg-white px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-navy placeholder-slate/40 shadow-sm transition-all duration-200 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                         placeholder="Smith"
                       />
                     </div>
@@ -352,7 +352,7 @@ export default function ContactPage() {
                       name="email"
                       autoComplete="email"
                       required
-                      className="mt-2 block w-full rounded-lg border border-slate/30 bg-white px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-navy placeholder-slate/40 shadow-sm transition-all duration-200 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20"
+                      className="mt-2 block w-full rounded-lg border border-slate/30 bg-white px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-navy placeholder-slate/40 shadow-sm transition-all duration-200 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -370,7 +370,7 @@ export default function ContactPage() {
                       id="phone"
                       name="phone"
                       autoComplete="tel"
-                      className="mt-2 block w-full rounded-lg border border-slate/30 bg-white px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-navy placeholder-slate/40 shadow-sm transition-all duration-200 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20"
+                      className="mt-2 block w-full rounded-lg border border-slate/30 bg-white px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-navy placeholder-slate/40 shadow-sm transition-all duration-200 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                       placeholder="(555) 123-4567"
                     />
                   </div>
@@ -387,7 +387,7 @@ export default function ContactPage() {
                       id="subject"
                       name="subject"
                       required
-                      className="mt-2 block w-full appearance-none rounded-lg border border-slate/30 bg-white px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-navy shadow-sm transition-all duration-200 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20"
+                      className="mt-2 block w-full appearance-none rounded-lg border border-slate/30 bg-white px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-navy shadow-sm transition-all duration-200 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                     >
                       <option value="" disabled selected>
                         Select a subject
@@ -413,7 +413,7 @@ export default function ContactPage() {
                       name="message"
                       rows={5}
                       required
-                      className="mt-2 block w-full resize-y rounded-lg border border-slate/30 bg-white px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-navy placeholder-slate/40 shadow-sm transition-all duration-200 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20"
+                      className="mt-2 block w-full resize-y rounded-lg border border-slate/30 bg-white px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-navy placeholder-slate/40 shadow-sm transition-all duration-200 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                       placeholder="Tell us about your inquiry..."
                     />
                   </div>
@@ -422,7 +422,7 @@ export default function ContactPage() {
                   <div>
                     <button
                       type="submit"
-                      className="w-full rounded-lg bg-gold px-8 py-3.5 font-[family-name:var(--font-inter)] text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20"
+                      className="w-full rounded-lg bg-accent px-8 py-3.5 font-[family-name:var(--font-inter)] text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20"
                     >
                       Send Message
                     </button>
@@ -470,10 +470,10 @@ export default function ContactPage() {
       {/* ===== PARTNER PORTAL CTA ===== */}
       <section className="border-t border-navy/5 bg-warm-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
-          <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+          <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-accent">
             Investors
           </p>
-          <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-semibold text-navy sm:text-3xl">
+          <h2 className="mt-4 font-[family-name:var(--font-nunito)] text-2xl font-semibold text-navy sm:text-3xl">
             Current Partners
           </h2>
           <p className="mx-auto mt-4 max-w-xl font-[family-name:var(--font-inter)] text-base leading-relaxed text-slate">

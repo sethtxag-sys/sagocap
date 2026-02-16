@@ -304,14 +304,14 @@ export default function PortfolioPage() {
           }}
         />
         {/* Gold accent line */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-accent">
               Track Record
             </p>
-            <h1 className="font-[family-name:var(--font-playfair)] text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="font-[family-name:var(--font-nunito)] text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
               Portfolio &amp; Track Record
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-white/70 sm:text-xl">
@@ -325,7 +325,7 @@ export default function PortfolioPage() {
       {/* ============================================================ */}
       {/*  2. KEY METRICS BAR                                           */}
       {/* ============================================================ */}
-      <section className="relative bg-gradient-to-br from-gold/10 via-warm-white to-gold/5">
+      <section className="relative bg-gradient-to-br from-accent/10 via-warm-white to-accent/5">
         <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-16">
           <div className="grid grid-cols-2 gap-8 sm:gap-6 lg:grid-cols-4">
             {[
@@ -335,7 +335,7 @@ export default function PortfolioPage() {
               { value: "1.57x", label: "Avg Equity Multiple" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <p className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-navy sm:text-4xl lg:text-5xl stat-number">
+                <p className="font-[family-name:var(--font-nunito)] text-3xl font-bold text-navy sm:text-4xl lg:text-5xl stat-number">
                   {stat.value}
                 </p>
                 <p className="mt-2 text-sm font-medium tracking-wide text-slate sm:text-base">
@@ -355,10 +355,10 @@ export default function PortfolioPage() {
           {/* Section header */}
           <div className="mb-14 sm:mb-16">
             <div className="flex items-center gap-3">
-              <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-navy sm:text-4xl">
+              <h2 className="font-[family-name:var(--font-nunito)] text-3xl font-bold text-navy sm:text-4xl">
                 Realized Investments
               </h2>
-              <span className="inline-flex items-center rounded-full bg-gold/15 px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-gold">
+              <span className="inline-flex items-center rounded-full bg-accent/15 px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-accent">
                 Exits
               </span>
             </div>
@@ -377,7 +377,7 @@ export default function PortfolioPage() {
               >
                 {/* Card header */}
                 <div className="bg-navy px-6 py-5">
-                  <h3 className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-white">
+                  <h3 className="font-[family-name:var(--font-nunito)] text-lg font-semibold text-white">
                     {deal.name}
                   </h3>
                   {deal.address && (
@@ -392,7 +392,7 @@ export default function PortfolioPage() {
                     <p className="text-xs font-semibold uppercase tracking-widest text-slate/70">
                       Net IRR
                     </p>
-                    <p className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-gold">
+                    <p className="font-[family-name:var(--font-nunito)] text-4xl font-bold text-accent">
                       {deal.irr}
                     </p>
                   </div>
@@ -449,10 +449,10 @@ export default function PortfolioPage() {
           {/* Section header */}
           <div className="mb-14 sm:mb-16">
             <div className="flex items-center gap-3">
-              <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-navy sm:text-4xl">
+              <h2 className="font-[family-name:var(--font-nunito)] text-3xl font-bold text-navy sm:text-4xl">
                 Current Portfolio
               </h2>
-              <span className="inline-flex items-center rounded-full bg-gold/15 px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-gold">
+              <span className="inline-flex items-center rounded-full bg-accent/15 px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-accent">
                 Active
               </span>
             </div>
@@ -477,17 +477,17 @@ export default function PortfolioPage() {
 
                 {/* Card body */}
                 <div className="px-6 py-5">
-                  <h3 className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-navy">
+                  <h3 className="font-[family-name:var(--font-nunito)] text-lg font-semibold text-navy">
                     {holding.name}
                   </h3>
 
                   <div className="mt-3 flex items-start gap-2 text-sm text-slate">
-                    <MapPinIcon className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                    <MapPinIcon className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                     <span>{holding.address}</span>
                   </div>
 
                   <div className="mt-2 flex items-center gap-2 text-sm text-slate">
-                    <CalendarIcon className="h-4 w-4 shrink-0 text-gold" />
+                    <CalendarIcon className="h-4 w-4 shrink-0 text-accent" />
                     <span>Acquired {holding.acquired}</span>
                   </div>
 
@@ -498,7 +498,7 @@ export default function PortfolioPage() {
                         key={detail}
                         className="flex items-start gap-2 text-sm text-navy/80"
                       >
-                        <span className="mt-1.5 block h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                        <span className="mt-1.5 block h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                         {detail}
                       </li>
                     ))}
@@ -527,10 +527,10 @@ export default function PortfolioPage() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           {/* Section header */}
           <div className="mb-14 sm:mb-16 text-center">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-accent">
               Beyond CRE
             </p>
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">
+            <h2 className="font-[family-name:var(--font-nunito)] text-3xl font-bold text-white sm:text-4xl">
               Other Ventures
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/60 sm:text-lg">
@@ -544,16 +544,16 @@ export default function PortfolioPage() {
             {ventures.map((venture) => (
               <article
                 key={venture.name}
-                className="group rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 hover:border-gold/30 hover:bg-white/[0.08]"
+                className="group rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 hover:border-accent/30 hover:bg-white/[0.08]"
               >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-gold/10">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
                   {venture.name === "The Light Park" ? (
-                    <SparkleIcon className="h-6 w-6 text-gold" />
+                    <SparkleIcon className="h-6 w-6 text-accent" />
                   ) : (
-                    <HomeIcon className="h-6 w-6 text-gold" />
+                    <HomeIcon className="h-6 w-6 text-accent" />
                   )}
                 </div>
-                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-white">
+                <h3 className="font-[family-name:var(--font-nunito)] text-xl font-semibold text-white">
                   {venture.name}
                 </h3>
                 <p className="mt-1 text-sm text-white/50">{venture.location}</p>
@@ -564,7 +564,7 @@ export default function PortfolioPage() {
                       key={highlight}
                       className="flex items-center gap-3 text-sm text-white/80"
                     >
-                      <TrendUpIcon className="h-4 w-4 shrink-0 text-gold" />
+                      <TrendUpIcon className="h-4 w-4 shrink-0 text-accent" />
                       {highlight}
                     </li>
                   ))}
@@ -578,9 +578,9 @@ export default function PortfolioPage() {
       {/* ============================================================ */}
       {/*  6. CTA                                                       */}
       {/* ============================================================ */}
-      <section className="bg-gradient-to-r from-gold via-gold-light to-gold">
+      <section className="bg-gradient-to-r from-accent via-accent-light to-accent">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-12 sm:flex-row lg:px-8 lg:py-14">
-          <p className="max-w-lg text-center font-[family-name:var(--font-playfair)] text-xl font-semibold text-navy sm:text-left sm:text-2xl">
+          <p className="max-w-lg text-center font-[family-name:var(--font-nunito)] text-xl font-semibold text-navy sm:text-left sm:text-2xl">
             Interested in partnering with us on our next acquisition?
           </p>
           <Link

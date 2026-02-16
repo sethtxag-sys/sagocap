@@ -166,15 +166,15 @@ export default function StrategyPage() {
           aria-hidden="true"
           style={{
             background:
-              "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(42,64,96,0.5) 0%, transparent 70%), linear-gradient(180deg, rgba(15,29,48,0.0) 0%, rgba(15,29,48,0.6) 100%)",
+              "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(25,61,120,0.5) 0%, transparent 70%), linear-gradient(180deg, rgba(15,38,84,0.0) 0%, rgba(15,38,84,0.6) 100%)",
           }}
         />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-32 pb-20 text-center lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold font-[family-name:var(--font-inter)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
             How We Invest
           </p>
-          <h1 className="mx-auto mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl font-[family-name:var(--font-playfair)]">
+          <h1 className="mx-auto mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl font-[family-name:var(--font-nunito)]">
             Investment Strategy
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl font-[family-name:var(--font-inter)]">
@@ -198,10 +198,10 @@ export default function StrategyPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Section header */}
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold font-[family-name:var(--font-inter)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
               Investment Thesis
             </p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
+            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
               Three Pillars of Our Strategy
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate sm:text-lg font-[family-name:var(--font-inter)]">
@@ -225,9 +225,9 @@ export default function StrategyPage() {
                   <div className="flex shrink-0 items-center justify-center">
                     <div className="relative flex h-36 w-36 items-center justify-center sm:h-44 sm:w-44 lg:h-52 lg:w-52">
                       {/* Background circle */}
-                      <div className="absolute inset-0 rounded-full border-2 border-gold/20" />
-                      <div className="absolute inset-3 rounded-full border border-gold/10" />
-                      <span className="text-7xl font-bold text-gold/20 sm:text-8xl lg:text-9xl font-[family-name:var(--font-playfair)]">
+                      <div className="absolute inset-0 rounded-full border-2 border-accent/20" />
+                      <div className="absolute inset-3 rounded-full border border-accent/10" />
+                      <span className="text-7xl font-bold text-accent/20 sm:text-8xl lg:text-9xl font-[family-name:var(--font-nunito)]">
                         {pillar.number}
                       </span>
                     </div>
@@ -236,12 +236,12 @@ export default function StrategyPage() {
                   {/* Content block */}
                   <div className="max-w-xl text-center lg:text-left">
                     <div className="inline-flex items-center gap-3">
-                      <span className="hidden h-px w-8 bg-gold lg:block" />
-                      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold font-[family-name:var(--font-inter)]">
+                      <span className="hidden h-px w-8 bg-accent lg:block" />
+                      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent font-[family-name:var(--font-inter)]">
                         Pillar {pillar.number}
                       </span>
                     </div>
-                    <h3 className="mt-3 text-2xl font-bold text-navy sm:text-3xl lg:text-4xl font-[family-name:var(--font-playfair)]">
+                    <h3 className="mt-3 text-2xl font-bold text-navy sm:text-3xl lg:text-4xl font-[family-name:var(--font-nunito)]">
                       {pillar.title}
                     </h3>
                     <p className="mt-4 text-base leading-relaxed text-slate sm:text-lg font-[family-name:var(--font-inter)]">
@@ -260,10 +260,10 @@ export default function StrategyPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Section header */}
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold font-[family-name:var(--font-inter)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
               Our Approach
             </p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
+            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
               How We Create Value
             </h2>
           </div>
@@ -277,15 +277,15 @@ export default function StrategyPage() {
               >
                 {/* Gold accent line */}
                 <div
-                  className="absolute inset-x-0 top-0 h-1 bg-gold"
+                  className="absolute inset-x-0 top-0 h-1 bg-accent"
                   aria-hidden="true"
                 />
 
-                <div className="text-navy/70 transition-colors duration-300 group-hover:text-gold">
+                <div className="text-navy/70 transition-colors duration-300 group-hover:text-accent">
                   {card.icon}
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold text-navy font-[family-name:var(--font-playfair)]">
+                <h3 className="mt-6 text-xl font-bold text-navy font-[family-name:var(--font-nunito)]">
                   {card.title}
                 </h3>
 
@@ -304,10 +304,10 @@ export default function StrategyPage() {
           <div className="grid items-start gap-16 lg:grid-cols-2 lg:gap-20">
             {/* Left column */}
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold font-[family-name:var(--font-inter)]">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
                 Target Markets
               </p>
-              <h2 className="mt-4 text-3xl font-bold leading-snug text-white sm:text-4xl lg:text-[2.75rem] lg:leading-snug font-[family-name:var(--font-playfair)]">
+              <h2 className="mt-4 text-3xl font-bold leading-snug text-white sm:text-4xl lg:text-[2.75rem] lg:leading-snug font-[family-name:var(--font-nunito)]">
                 Where We Invest
               </h2>
               <p className="mt-5 text-base leading-relaxed text-white/70 sm:text-lg font-[family-name:var(--font-inter)]">
@@ -370,15 +370,15 @@ export default function StrategyPage() {
       <section className="relative bg-warm-white py-24 sm:py-28">
         {/* Gold accent top border */}
         <div
-          className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent"
+          className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent"
           aria-hidden="true"
         />
 
         <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold font-[family-name:var(--font-inter)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
             Partner With Us
           </p>
-          <h2 className="mt-4 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
+          <h2 className="mt-4 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
             Ready to explore partnership opportunities?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-slate sm:text-lg font-[family-name:var(--font-inter)]">
@@ -387,7 +387,7 @@ export default function StrategyPage() {
           </p>
           <Link
             href="/contact"
-            className="mt-10 inline-block rounded bg-gold px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20 font-[family-name:var(--font-inter)]"
+            className="mt-10 inline-block rounded bg-accent px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
           >
             Contact Us
           </Link>

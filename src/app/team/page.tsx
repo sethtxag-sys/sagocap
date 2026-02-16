@@ -66,7 +66,7 @@ function TeamCard({
       </div>
 
       {/* Info */}
-      <h3 className="mt-5 text-lg font-bold text-navy font-[family-name:var(--font-playfair)]">
+      <h3 className="mt-5 text-lg font-bold text-navy font-[family-name:var(--font-nunito)]">
         {member.name}
       </h3>
       <p className="mt-1 text-sm font-medium text-slate font-[family-name:var(--font-inter)]">
@@ -75,7 +75,7 @@ function TeamCard({
       {member.email && (
         <a
           href={`mailto:${member.email}`}
-          className="mt-2 text-sm text-gold transition-colors duration-200 hover:text-gold-light font-[family-name:var(--font-inter)]"
+          className="mt-2 text-sm text-accent transition-colors duration-200 hover:text-accent-light font-[family-name:var(--font-inter)]"
         >
           {member.email}
         </a>
@@ -94,11 +94,11 @@ export default function TeamPage() {
           aria-hidden="true"
           style={{
             background:
-              "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(42,64,96,0.45) 0%, transparent 70%), linear-gradient(180deg, rgba(15,29,48,0.0) 0%, rgba(15,29,48,0.4) 100%)",
+              "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(25,61,120,0.45) 0%, transparent 70%), linear-gradient(180deg, rgba(15,38,84,0.0) 0%, rgba(15,38,84,0.4) 100%)",
           }}
         />
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-8">
-          <h1 className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl font-[family-name:var(--font-playfair)]">
+          <h1 className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl font-[family-name:var(--font-nunito)]">
             Our Team
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl font-[family-name:var(--font-inter)]">
@@ -113,10 +113,10 @@ export default function TeamPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Section header */}
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold font-[family-name:var(--font-inter)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
               Leadership
             </p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
+            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
               Principals &amp; Partners
             </h2>
           </div>
@@ -135,10 +135,10 @@ export default function TeamPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Section header */}
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold font-[family-name:var(--font-inter)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
               Operations
             </p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
+            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
               Management Team
             </h2>
           </div>
@@ -157,10 +157,10 @@ export default function TeamPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Section header */}
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold font-[family-name:var(--font-inter)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
               Brokerage
             </p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
+            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
               Associates &amp; Staff
             </h2>
           </div>
@@ -221,12 +221,12 @@ export default function TeamPage() {
       {/* ──────────────── CTA ──────────────── */}
       <section className="bg-white py-24 sm:py-28">
         <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
-          <h2 className="text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
+          <h2 className="text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
             Want to join our team or explore partnership opportunities?
           </h2>
           <Link
             href="/contact"
-            className="mt-10 inline-block rounded bg-gold px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20 font-[family-name:var(--font-inter)]"
+            className="mt-10 inline-block rounded bg-accent px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
           >
             Contact Us
           </Link>

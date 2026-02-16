@@ -92,17 +92,17 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-navy-dark/60 via-transparent to-navy-light/20" />
 
         {/* Decorative accent line */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             {/* Eyebrow */}
-            <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+            <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-accent">
               Who We Are
             </p>
 
             {/* Heading */}
-            <h1 className="mt-6 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 font-[family-name:var(--font-nunito)] text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
               About Sago
             </h1>
 
@@ -114,9 +114,9 @@ export default function AboutPage() {
 
             {/* Decorative divider */}
             <div className="mt-10 flex items-center justify-center gap-3">
-              <span className="h-px w-12 bg-gold/40" />
-              <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              <span className="h-px w-12 bg-gold/40" />
+              <span className="h-px w-12 bg-accent/40" />
+              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+              <span className="h-px w-12 bg-accent/40" />
             </div>
           </div>
         </div>
@@ -128,11 +128,11 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
             {/* Text Column */}
             <div>
-              <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+              <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-accent">
                 Our Story
               </p>
 
-              <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight tracking-tight text-navy sm:text-4xl">
+              <h2 className="mt-4 font-[family-name:var(--font-nunito)] text-3xl font-semibold leading-tight tracking-tight text-navy sm:text-4xl">
                 Independent. Texas-Based.
                 <br />
                 Built for the Long Term.
@@ -221,7 +221,7 @@ export default function AboutPage() {
               </div>
 
               {/* Decorative border accent */}
-              <div className="absolute -bottom-3 -right-3 -z-10 h-full w-full rounded-lg border-2 border-gold/20" />
+              <div className="absolute -bottom-3 -right-3 -z-10 h-full w-full rounded-lg border-2 border-accent/20" />
             </div>
           </div>
         </div>
@@ -232,16 +232,16 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Section Header */}
           <div className="mx-auto max-w-2xl text-center">
-            <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+            <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-accent">
               What Drives Us
             </p>
-            <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight tracking-tight text-navy sm:text-4xl">
+            <h2 className="mt-4 font-[family-name:var(--font-nunito)] text-3xl font-semibold leading-tight tracking-tight text-navy sm:text-4xl">
               Our Values
             </h2>
             <div className="mt-6 flex items-center justify-center gap-3">
-              <span className="h-px w-8 bg-gold/40" />
-              <span className="h-1 w-1 rounded-full bg-gold" />
-              <span className="h-px w-8 bg-gold/40" />
+              <span className="h-px w-8 bg-accent/40" />
+              <span className="h-1 w-1 rounded-full bg-accent" />
+              <span className="h-px w-8 bg-accent/40" />
             </div>
           </div>
 
@@ -250,15 +250,15 @@ export default function AboutPage() {
             {VALUES.map((value) => (
               <div
                 key={value.title}
-                className="group relative rounded-lg border border-navy/5 bg-white p-8 shadow-sm transition-all duration-300 hover:border-gold/20 hover:shadow-md sm:p-10"
+                className="group relative rounded-lg border border-navy/5 bg-white p-8 shadow-sm transition-all duration-300 hover:border-accent/20 hover:shadow-md sm:p-10"
               >
                 {/* Icon */}
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy/5 transition-colors duration-300 group-hover:bg-gold/10">
-                  <value.icon className="h-6 w-6 text-navy transition-colors duration-300 group-hover:text-gold" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy/5 transition-colors duration-300 group-hover:bg-accent/10">
+                  <value.icon className="h-6 w-6 text-navy transition-colors duration-300 group-hover:text-accent" />
                 </div>
 
                 {/* Title */}
-                <h3 className="mt-6 font-[family-name:var(--font-playfair)] text-xl font-semibold text-navy">
+                <h3 className="mt-6 font-[family-name:var(--font-nunito)] text-xl font-semibold text-navy">
                   {value.title}
                 </h3>
 
@@ -268,7 +268,7 @@ export default function AboutPage() {
                 </p>
 
                 {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-8 right-8 h-0.5 origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100" />
+                <div className="absolute bottom-0 left-8 right-8 h-0.5 origin-left scale-x-0 bg-accent transition-transform duration-300 group-hover:scale-x-100" />
               </div>
             ))}
           </div>
@@ -281,16 +281,16 @@ export default function AboutPage() {
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+            <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-accent">
               Community
             </p>
-            <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+            <h2 className="mt-4 font-[family-name:var(--font-nunito)] text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
               Giving Back
             </h2>
             <div className="mt-6 flex items-center justify-center gap-3">
-              <span className="h-px w-8 bg-gold/40" />
-              <span className="h-1 w-1 rounded-full bg-gold" />
-              <span className="h-px w-8 bg-gold/40" />
+              <span className="h-px w-8 bg-accent/40" />
+              <span className="h-1 w-1 rounded-full bg-accent" />
+              <span className="h-px w-8 bg-accent/40" />
             </div>
 
             <div className="mt-10 space-y-5 font-[family-name:var(--font-inter)] text-base leading-relaxed text-white/70 sm:text-lg sm:leading-relaxed">
@@ -312,8 +312,8 @@ export default function AboutPage() {
           <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {/* Card 1 */}
             <div className="rounded-lg border border-white/10 bg-white/5 p-6 backdrop-blur-sm sm:p-8">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/10">
-                <span className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-gold">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/10">
+                <span className="font-[family-name:var(--font-nunito)] text-lg font-semibold text-accent">
                   BM
                 </span>
               </div>
@@ -328,8 +328,8 @@ export default function AboutPage() {
 
             {/* Card 2 */}
             <div className="rounded-lg border border-white/10 bg-white/5 p-6 backdrop-blur-sm sm:p-8">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/10">
-                <span className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-gold">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/10">
+                <span className="font-[family-name:var(--font-nunito)] text-lg font-semibold text-accent">
                   SM
                 </span>
               </div>
@@ -342,8 +342,8 @@ export default function AboutPage() {
 
             {/* Card 3 */}
             <div className="rounded-lg border border-white/10 bg-white/5 p-6 backdrop-blur-sm sm:p-8">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/10">
-                <span className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-gold">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/10">
+                <span className="font-[family-name:var(--font-nunito)] text-lg font-semibold text-accent">
                   BM
                 </span>
               </div>
@@ -362,16 +362,16 @@ export default function AboutPage() {
       <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+            <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-accent">
               Affiliations
             </p>
-            <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight tracking-tight text-navy sm:text-4xl">
+            <h2 className="mt-4 font-[family-name:var(--font-nunito)] text-3xl font-semibold leading-tight tracking-tight text-navy sm:text-4xl">
               Proud Members
             </h2>
             <div className="mt-6 flex items-center justify-center gap-3">
-              <span className="h-px w-8 bg-gold/40" />
-              <span className="h-1 w-1 rounded-full bg-gold" />
-              <span className="h-px w-8 bg-gold/40" />
+              <span className="h-px w-8 bg-accent/40" />
+              <span className="h-1 w-1 rounded-full bg-accent" />
+              <span className="h-px w-8 bg-accent/40" />
             </div>
           </div>
 
@@ -380,7 +380,7 @@ export default function AboutPage() {
             {MEMBERSHIPS.map((org) => (
               <div
                 key={org}
-                className="group flex h-28 w-40 flex-col items-center justify-center rounded-lg border border-navy/5 bg-warm-white transition-all duration-300 hover:border-gold/20 hover:shadow-md sm:h-32 sm:w-48"
+                className="group flex h-28 w-40 flex-col items-center justify-center rounded-lg border border-navy/5 bg-warm-white transition-all duration-300 hover:border-accent/20 hover:shadow-md sm:h-32 sm:w-48"
               >
                 <span className="font-[family-name:var(--font-inter)] text-2xl font-bold tracking-[0.15em] text-navy/70 transition-colors duration-300 group-hover:text-navy sm:text-3xl">
                   {org}
@@ -397,7 +397,7 @@ export default function AboutPage() {
       {/* ===== BOTTOM CTA ===== */}
       <section className="border-t border-navy/5 bg-warm-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
-          <h2 className="font-[family-name:var(--font-playfair)] text-2xl font-semibold text-navy sm:text-3xl">
+          <h2 className="font-[family-name:var(--font-nunito)] text-2xl font-semibold text-navy sm:text-3xl">
             Ready to explore what Sago can do for you?
           </h2>
           <p className="mx-auto mt-4 max-w-xl font-[family-name:var(--font-inter)] text-base leading-relaxed text-slate">
@@ -407,7 +407,7 @@ export default function AboutPage() {
           <div className="mt-8">
             <Link
               href="/#contact"
-              className="inline-flex items-center gap-2 rounded bg-gold px-8 py-4 font-[family-name:var(--font-inter)] text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20"
+              className="inline-flex items-center gap-2 rounded bg-accent px-8 py-4 font-[family-name:var(--font-inter)] text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20"
             >
               Contact Us
               <svg

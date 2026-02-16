@@ -1,25 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const quickLinks = [
-  { label: "About", href: "#about" },
-  { label: "Strategy", href: "#strategy" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Team", href: "#team" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Strategy", href: "/strategy" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Team", href: "/team" },
+  { label: "Contact", href: "/contact" },
 ];
-
-function LeafIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className={className}
-      aria-hidden="true"
-    >
-      <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z" />
-    </svg>
-  );
-}
 
 function InstagramIcon() {
   return (
@@ -65,11 +53,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-16">
           {/* Column 1: Brand */}
           <div className="space-y-6">
-            <Link href="/" className="inline-flex items-center gap-2 group">
-              <LeafIcon className="h-7 w-7 text-gold transition-colors group-hover:text-gold-light" />
-              <span className="font-heading text-2xl font-semibold tracking-wide text-white">
-                SAGO
-              </span>
+            <Link href="/" className="inline-block group">
+              <Image
+                src="/logo-white.svg"
+                alt="Sago"
+                width={160}
+                height={48}
+                className="h-12 w-auto opacity-70 transition-opacity group-hover:opacity-100"
+              />
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-white/60">
               A fully integrated commercial real estate and investment firm.
@@ -86,7 +77,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/70 transition-colors duration-200 hover:text-gold"
+                    className="text-sm text-white/70 transition-colors duration-200 hover:text-accent"
                   >
                     {link.label}
                   </Link>
@@ -109,13 +100,13 @@ export default function Footer() {
               <div className="space-y-2">
                 <a
                   href="mailto:hello@sagocap.com"
-                  className="block text-sm text-white/70 transition-colors duration-200 hover:text-gold"
+                  className="block text-sm text-white/70 transition-colors duration-200 hover:text-accent"
                 >
                   hello@sagocap.com
                 </a>
                 <a
                   href="tel:+18888503708"
-                  className="block text-sm text-white/70 transition-colors duration-200 hover:text-gold"
+                  className="block text-sm text-white/70 transition-colors duration-200 hover:text-accent"
                 >
                   (888) 850-3708
                 </a>
@@ -135,7 +126,7 @@ export default function Footer() {
                     aria-label={social.label}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white/40 transition-colors duration-200 hover:text-gold"
+                    className="text-white/40 transition-colors duration-200 hover:text-accent"
                   >
                     {social.icon}
                   </a>
@@ -169,7 +160,7 @@ export default function Footer() {
           <p>&copy; 2026 Sago Capital, LLC</p>
           <Link
             href="/terms"
-            className="transition-colors duration-200 hover:text-gold"
+            className="transition-colors duration-200 hover:text-accent"
           >
             Terms of Use
           </Link>
