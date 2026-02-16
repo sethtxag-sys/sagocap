@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About | Sago Capital",
   description:
-    "Learn about Sago Capital, a fully integrated commercial real estate and investment firm built on trust, discipline, and long-term vision. Headquartered in College Station, Texas.",
+    "Sago Capital is a vertically integrated commercial real estate platform headquartered in College Station, Texas. Acquisitions, development, brokerage, and management under one banner.",
 };
 
 function ShieldIcon({ className }: { className?: string }) {
@@ -108,8 +108,8 @@ export default function AboutPage() {
 
             {/* Subtitle */}
             <p className="mt-6 font-[family-name:var(--font-inter)] text-lg leading-relaxed text-white/70 sm:text-xl">
-              A fully integrated commercial real estate and investment firm
-              built on trust, discipline, and long-term vision.
+              A vertically integrated commercial real estate platform built on
+              discipline, execution, and alignment with our investors.
             </p>
 
             {/* Decorative divider */}
@@ -156,7 +156,7 @@ export default function AboutPage() {
                 <p>
                   In 2025, Sago consolidated all of its real estate-related
                   companies &mdash; brokerage, development, and management
-                  &mdash; under one banner, creating a fully integrated platform.
+                  &mdash; under one banner, creating a vertically integrated platform.
                   Today, the firm operates four distinct business lines:{" "}
                   <span className="font-medium text-navy">acquisitions</span>,{" "}
                   <span className="font-medium text-navy">development</span>,{" "}
@@ -173,10 +173,10 @@ export default function AboutPage() {
 
               <div className="mt-10">
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   className="inline-flex items-center gap-2 rounded bg-navy px-7 py-3.5 font-[family-name:var(--font-inter)] text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:bg-navy-light hover:shadow-lg hover:shadow-navy/20"
                 >
-                  Get in Touch
+                  Start the Conversation
                   <svg
                     className="h-4 w-4"
                     viewBox="0 0 16 16"
@@ -398,18 +398,19 @@ export default function AboutPage() {
       <section className="border-t border-navy/5 bg-warm-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
           <h2 className="font-[family-name:var(--font-nunito)] text-2xl font-semibold text-navy sm:text-3xl">
-            Ready to explore what Sago can do for you?
+            Start the Conversation
           </h2>
           <p className="mx-auto mt-4 max-w-xl font-[family-name:var(--font-inter)] text-base leading-relaxed text-slate">
-            Whether you are an investor, a tenant, or a landowner, we would love
-            to start a conversation.
+            We partner with family offices, HNW individuals, and institutional
+            allocators seeking differentiated exposure to Texas Triangle
+            commercial real estate.
           </p>
           <div className="mt-8">
             <Link
-              href="/#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 rounded bg-accent px-8 py-4 font-[family-name:var(--font-inter)] text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20"
             >
-              Contact Us
+              Explore Opportunities
               <svg
                 className="h-4 w-4"
                 viewBox="0 0 16 16"

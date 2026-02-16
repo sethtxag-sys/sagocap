@@ -4,16 +4,46 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Our Team | Sago Capital",
   description:
-    "Meet the Sago Capital team — experienced professionals with deep expertise in commercial real estate investment, development, brokerage, and management.",
+    "Sago Capital is led by operators with functional specialization across acquisitions, capital markets, asset management, operations, and development.",
 };
 
 const PRINCIPALS = [
-  { name: "Barry Moore", title: "Principal", email: "bmoore@sagocap.com" },
-  { name: "Jasen Coots", title: "Principal", email: "jcoots@sagocap.com" },
-  { name: "Joe White", title: "Principal", email: "jwhite@sagocap.com" },
-  { name: "Matt Johnson", title: "Principal" },
-  { name: "Seth McKinney", title: "Principal" },
-  { name: "Jack Parker", title: "Partner" },
+  {
+    name: "Seth McKinney",
+    title: "Principal — Acquisitions & Capital Markets",
+    email: undefined,
+    credentials: "", // TODO: add credentials (CCIM, etc.)
+  },
+  {
+    name: "Barry Moore",
+    title: "Principal — Capital Markets",
+    email: "bmoore@sagocap.com",
+    credentials: "", // TODO: add credentials
+  },
+  {
+    name: "Matt Johnson",
+    title: "Principal — Asset Management",
+    email: undefined,
+    credentials: "", // TODO: add credentials
+  },
+  {
+    name: "Jasen Coots",
+    title: "Principal — Operations",
+    email: "jcoots@sagocap.com",
+    credentials: "", // TODO: add credentials
+  },
+  {
+    name: "Joe White",
+    title: "Principal — Development",
+    email: "jwhite@sagocap.com",
+    credentials: "", // TODO: add credentials
+  },
+  {
+    name: "Jack Parker",
+    title: "Partner",
+    email: undefined,
+    credentials: "",
+  },
 ];
 
 const MANAGEMENT = [
@@ -32,7 +62,7 @@ const ASSOCIATES = [
 function TeamCard({
   member,
 }: {
-  member: { name: string; title: string; email?: string };
+  member: { name: string; title: string; email?: string; credentials?: string };
 }) {
   return (
     <article className="group flex flex-col rounded-lg bg-white p-6 shadow-sm shadow-navy/5 transition-shadow duration-300 hover:shadow-md hover:shadow-navy/10">
@@ -72,6 +102,11 @@ function TeamCard({
       <p className="mt-1 text-sm font-medium text-slate font-[family-name:var(--font-inter)]">
         {member.title}
       </p>
+      {member.credentials && (
+        <p className="mt-1 text-xs text-accent font-[family-name:var(--font-inter)]">
+          {member.credentials}
+        </p>
+      )}
       {member.email && (
         <a
           href={`mailto:${member.email}`}
@@ -102,8 +137,8 @@ export default function TeamPage() {
             Our Team
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl font-[family-name:var(--font-inter)]">
-            Experienced professionals with deep expertise in commercial real
-            estate investment, development, brokerage, and management.
+            Operators with functional specialization across acquisitions,
+            capital markets, asset management, operations, and development.
           </p>
         </div>
       </section>
@@ -212,8 +247,8 @@ export default function TeamPage() {
 
           {/* Caption */}
           <p className="mx-auto mt-8 max-w-2xl text-center text-base leading-relaxed text-white/60 font-[family-name:var(--font-inter)]">
-            The Sago team continues to grow, strengthening our capacity to serve
-            clients with greater efficiency and expertise.
+            A vertically integrated team executing across the full lifecycle of
+            every investment.
           </p>
         </div>
       </section>
@@ -222,13 +257,13 @@ export default function TeamPage() {
       <section className="bg-white py-24 sm:py-28">
         <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
           <h2 className="text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
-            Want to join our team or explore partnership opportunities?
+            Interested in co-investing or exploring career opportunities?
           </h2>
           <Link
             href="/contact"
             className="mt-10 inline-block rounded bg-accent px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
           >
-            Contact Us
+            Start the Conversation
           </Link>
         </div>
       </section>

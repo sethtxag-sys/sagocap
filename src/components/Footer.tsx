@@ -4,7 +4,7 @@ import Image from "next/image";
 const quickLinks = [
   { label: "About", href: "/about" },
   { label: "Strategy", href: "/strategy" },
-  { label: "Portfolio", href: "/portfolio" },
+  { label: "Track Record", href: "/portfolio" },
   { label: "Team", href: "/team" },
   { label: "Contact", href: "/contact" },
 ];
@@ -63,7 +63,7 @@ export default function Footer() {
               />
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-white/60">
-              A fully integrated commercial real estate and investment firm.
+              Industrial &amp; Office&ensp;|&ensp;Texas Triangle &amp; Beyond
             </p>
           </div>
 
@@ -97,13 +97,29 @@ export default function Footer() {
                 <br />
                 College Station, Texas 77845
               </address>
-              <div className="space-y-2">
-                <a
-                  href="mailto:hello@sagocap.com"
-                  className="block text-sm text-white/70 transition-colors duration-200 hover:text-accent"
-                >
-                  hello@sagocap.com
-                </a>
+              <div className="space-y-3">
+                <div>
+                  <span className="text-[10px] font-semibold uppercase tracking-widest text-white/40">
+                    Acquisitions
+                  </span>
+                  <a
+                    href="mailto:acquisitions@sagocap.com"
+                    className="block text-sm text-white/70 transition-colors duration-200 hover:text-accent"
+                  >
+                    acquisitions@sagocap.com
+                  </a>
+                </div>
+                <div>
+                  <span className="text-[10px] font-semibold uppercase tracking-widest text-white/40">
+                    Investor Relations
+                  </span>
+                  <a
+                    href="mailto:ir@sagocap.com"
+                    className="block text-sm text-white/70 transition-colors duration-200 hover:text-accent"
+                  >
+                    ir@sagocap.com
+                  </a>
+                </div>
                 <a
                   href="tel:+18888503708"
                   className="block text-sm text-white/70 transition-colors duration-200 hover:text-accent"

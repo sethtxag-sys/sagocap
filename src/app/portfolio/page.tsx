@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Sago Capital",
+  title: "Track Record | Sago Capital",
   description:
-    "Since 2019, Sago has acquired or developed properties valued at over $80 million across the Southeastern and Central US. Explore our realized exits and current holdings.",
+    "Sago Capital has deployed over $80M across industrial and office acquisitions since 2019, generating a 30.9% realized net IRR and 1.57x average equity multiple.",
 };
 
 /* ------------------------------------------------------------------ */
@@ -20,6 +20,8 @@ interface ExitDeal {
   type: string;
   size: string;
   location?: string;
+  strategy: string;
+  vintage: string; // TODO: confirm all vintage years with team
 }
 
 const realizedExits: ExitDeal[] = [
@@ -32,6 +34,8 @@ const realizedExits: ExitDeal[] = [
     type: "Industrial",
     size: "22,535 SF",
     location: "Raleigh, NC",
+    strategy: "Value-Add Industrial | Sale-Leaseback",
+    vintage: "2022", // TODO: confirm vintage
   },
   {
     name: "H6S",
@@ -42,6 +46,8 @@ const realizedExits: ExitDeal[] = [
     type: "Commercial Land",
     size: "3.76 ac",
     location: "College Station, TX",
+    strategy: "Land Banking | Entitlement",
+    vintage: "2021", // TODO: confirm vintage
   },
   {
     name: "Gray Fox",
@@ -52,6 +58,8 @@ const realizedExits: ExitDeal[] = [
     type: "Flex Industrial",
     size: "20,000 SF",
     location: "Monroe, NC",
+    strategy: "Opportunistic Flip | Market Timing",
+    vintage: "2022", // TODO: confirm vintage
   },
   {
     name: "Columbia",
@@ -62,6 +70,8 @@ const realizedExits: ExitDeal[] = [
     type: "Office",
     size: "36,833 SF",
     location: "Columbia, MO",
+    strategy: "Value-Add Office | Lease-Up",
+    vintage: "2021", // TODO: confirm vintage
   },
   {
     name: "Peachtree",
@@ -71,6 +81,8 @@ const realizedExits: ExitDeal[] = [
     type: "Mixed-Use",
     size: "",
     location: "Atlanta, GA",
+    strategy: "Deep Value-Add | Recapitalization",
+    vintage: "2019", // TODO: confirm vintage
   },
 ];
 
@@ -123,33 +135,6 @@ const currentHoldings: CurrentHolding[] = [
     address: "901-914 North Industrial Road, Augusta, KS",
     acquired: "October 2024",
     details: ["Publicly traded tenant (NASDAQ: VSEC)"],
-  },
-];
-
-interface Venture {
-  name: string;
-  location: string;
-  highlights: string[];
-}
-
-const ventures: Venture[] = [
-  {
-    name: "Charleston Mills Townhomes",
-    location: "College Station, TX",
-    highlights: [
-      "Sales to Date: $23.1M",
-      "Phase 2 Sold Out",
-      "Phase 3 Under Construction",
-    ],
-  },
-  {
-    name: "The Light Park",
-    location: "Multiple Locations",
-    highlights: [
-      "Founded 2020",
-      "Exited with 6 locations",
-      "6x multiple after 5 years",
-    ],
   },
 ];
 
@@ -212,24 +197,6 @@ function CalendarIcon({ className }: { className?: string }) {
   );
 }
 
-function TrendUpIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-    >
-      <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-      <polyline points="16 7 22 7 22 13" />
-    </svg>
-  );
-}
-
 function ArrowRightIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -243,42 +210,6 @@ function ArrowRightIcon({ className }: { className?: string }) {
       aria-hidden="true"
     >
       <path d="M5 12h14M12 5l7 7-7 7" />
-    </svg>
-  );
-}
-
-function HomeIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-    >
-      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-      <polyline points="9 22 9 12 15 12 15 22" />
-    </svg>
-  );
-}
-
-function SparkleIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-    >
-      <path d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.95l-.71.71M21 12h-1M4 12H3m16.66 7.66l-.71-.71M4.05 4.05l-.71-.71" />
-      <circle cx="12" cy="12" r="4" />
     </svg>
   );
 }
@@ -312,11 +243,12 @@ export default function PortfolioPage() {
               Track Record
             </p>
             <h1 className="font-[family-name:var(--font-nunito)] text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-              Portfolio &amp; Track Record
+              Track Record
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-white/70 sm:text-xl">
-              Since 2019, Sago has acquired or developed properties valued at
-              over $80&nbsp;million across the Southeastern and Central&nbsp;US.
+              Since 2019, Sago has deployed over $80&nbsp;million across
+              industrial and office acquisitions in the Texas Triangle and
+              beyond.
             </p>
           </div>
         </div>
@@ -329,9 +261,9 @@ export default function PortfolioPage() {
         <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-16">
           <div className="grid grid-cols-2 gap-8 sm:gap-6 lg:grid-cols-4">
             {[
-              { value: "$80M+", label: "Total Transactions" },
+              { value: "$80M+", label: "Transaction Volume" },
               { value: "1.5M+", label: "Square Feet" },
-              { value: "30.9%", label: "Avg Net IRR" },
+              { value: "30.9%", label: "Realized Net IRR" },
               { value: "1.57x", label: "Avg Equity Multiple" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
@@ -377,12 +309,20 @@ export default function PortfolioPage() {
               >
                 {/* Card header */}
                 <div className="bg-navy px-6 py-5">
-                  <h3 className="font-[family-name:var(--font-nunito)] text-lg font-semibold text-white">
-                    {deal.name}
-                  </h3>
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-[family-name:var(--font-nunito)] text-lg font-semibold text-white">
+                      {deal.name}
+                    </h3>
+                    <span className="text-xs font-medium text-white/40">
+                      V{deal.vintage}
+                    </span>
+                  </div>
                   {deal.address && (
                     <p className="mt-1 text-sm text-white/60">{deal.address}</p>
                   )}
+                  <p className="mt-2 text-xs font-medium tracking-wide text-accent">
+                    {deal.strategy}
+                  </p>
                 </div>
 
                 {/* Card body */}
@@ -450,7 +390,7 @@ export default function PortfolioPage() {
           <div className="mb-14 sm:mb-16">
             <div className="flex items-center gap-3">
               <h2 className="font-[family-name:var(--font-nunito)] text-3xl font-bold text-navy sm:text-4xl">
-                Current Portfolio
+                Current Holdings
               </h2>
               <span className="inline-flex items-center rounded-full bg-accent/15 px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-accent">
                 Active
@@ -511,83 +451,18 @@ export default function PortfolioPage() {
       </section>
 
       {/* ============================================================ */}
-      {/*  5. OTHER VENTURES                                            */}
-      {/* ============================================================ */}
-      <section className="relative overflow-hidden bg-navy py-20 sm:py-28">
-        {/* Subtle background pattern */}
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-            backgroundSize: "40px 40px",
-          }}
-        />
-
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Section header */}
-          <div className="mb-14 sm:mb-16 text-center">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-accent">
-              Beyond CRE
-            </p>
-            <h2 className="font-[family-name:var(--font-nunito)] text-3xl font-bold text-white sm:text-4xl">
-              Other Ventures
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/60 sm:text-lg">
-              Demonstrating the breadth of Sago&rsquo;s deal experience across
-              asset classes and business models.
-            </p>
-          </div>
-
-          {/* Venture cards */}
-          <div className="mx-auto grid max-w-4xl gap-8 sm:grid-cols-2">
-            {ventures.map((venture) => (
-              <article
-                key={venture.name}
-                className="group rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 hover:border-accent/30 hover:bg-white/[0.08]"
-              >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
-                  {venture.name === "The Light Park" ? (
-                    <SparkleIcon className="h-6 w-6 text-accent" />
-                  ) : (
-                    <HomeIcon className="h-6 w-6 text-accent" />
-                  )}
-                </div>
-                <h3 className="font-[family-name:var(--font-nunito)] text-xl font-semibold text-white">
-                  {venture.name}
-                </h3>
-                <p className="mt-1 text-sm text-white/50">{venture.location}</p>
-
-                <ul className="mt-5 space-y-2.5">
-                  {venture.highlights.map((highlight) => (
-                    <li
-                      key={highlight}
-                      className="flex items-center gap-3 text-sm text-white/80"
-                    >
-                      <TrendUpIcon className="h-4 w-4 shrink-0 text-accent" />
-                      {highlight}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/*  6. CTA                                                       */}
+      {/*  5. CTA                                                       */}
       {/* ============================================================ */}
       <section className="bg-gradient-to-r from-accent via-accent-light to-accent">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-12 sm:flex-row lg:px-8 lg:py-14">
           <p className="max-w-lg text-center font-[family-name:var(--font-nunito)] text-xl font-semibold text-navy sm:text-left sm:text-2xl">
-            Interested in partnering with us on our next acquisition?
+            Seeking co-investment partners for our next acquisition.
           </p>
           <Link
-            href="/#contact"
+            href="/contact"
             className="inline-flex shrink-0 items-center gap-2 rounded bg-navy px-8 py-3.5 text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:bg-navy-dark hover:shadow-lg hover:shadow-navy/30"
           >
-            Contact Us
+            Start the Conversation
             <ArrowRightIcon className="h-4 w-4" />
           </Link>
         </div>

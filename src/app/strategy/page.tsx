@@ -4,35 +4,35 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Investment Strategy | Sago Capital",
   description:
-    "Sago Capital's disciplined investment strategy focuses on low cost per square foot, immediate cash flow, and below market rents across the Southeast and Midwest.",
+    "Sago Capital deploys a disciplined, three-pillar strategy targeting off-market industrial and office assets below replacement cost across the Texas Triangle and beyond.",
 };
 
 const PILLARS = [
   {
     number: 1,
-    title: "Low Cost Per Square Foot",
+    title: "Off-Market Sourcing Advantage",
     description:
-      "We focus on undervalued properties priced well below replacement cost. These assets feature significant potential for capital appreciation, heightened by strategic improvements and efficient management. By exploiting the gap between acquisition cost and actual market value, we generate above-average returns.",
+      "We run direct-to-owner campaigns across 200+ opportunities per quarter, bypassing marketed deal flow entirely. Our proprietary sourcing targets distressed sellers, estate situations, and corporate divestitures—acquiring assets at 40–60% of replacement cost. This basis advantage is the foundation of every investment we make.",
   },
   {
     number: 2,
-    title: "Immediate Cash Flow",
+    title: "Basis Reset Through Execution",
     description:
-      "We pursue high cap rate, cash-flowing assets that deliver competitive, immediate returns regardless of credit market conditions. Our investments historically provide distributions within a month of closing. This conservative underwriting allows us to maintain competitive rents and yield for investors.",
+      "We deploy aggressive lease-up strategies, targeted capex, and NNN conversions to reset the income profile of every acquisition within the first 12 months. Our vertically integrated platform—property management, leasing, and construction—allows us to execute without third-party drag. Investors historically receive distributions within 90 days of closing.",
   },
   {
     number: 3,
-    title: "Below Market Rents",
+    title: "Forced Appreciation Engine",
     description:
-      "We identify assets with below-market rents at acquisition. This approach allows us to create value by increasing rents cautiously while maintaining occupancy. Opportunities to increase rents, combined with a low cost-per-square-foot basis, act as a lever to boost both income and capital value.",
+      "We engineer value through mark-to-market rent rollovers, zoning arbitrage, entitlement work, and highest-and-best-use repositioning. Combined with our low cost-per-square-foot basis, these levers compress cap rates and drive outsized equity returns at disposition. This is not passive appreciation—it is manufactured alpha.",
   },
 ];
 
 const APPROACH_CARDS = [
   {
-    title: "Strategic Value Creation",
+    title: "Direct-to-Owner Campaigns",
     description:
-      "We target undervalued properties and unlock their potential with efficient improvements.",
+      "Proprietary sourcing through direct mail, cold outreach, and broker networks that surface off-market deals before they reach the institutional market.",
     icon: (
       <svg
         width="40"
@@ -62,9 +62,9 @@ const APPROACH_CARDS = [
     ),
   },
   {
-    title: "Immediate, Strong Cash Flow",
+    title: "Speed & Certainty of Close",
     description:
-      "We focus on cash-flowing assets that generate solid returns from day one.",
+      "Pre-arranged capital structures and streamlined diligence allow us to close in 30–45 days, giving sellers the certainty they need and giving us a competitive edge over slower institutional buyers.",
     icon: (
       <svg
         width="40"
@@ -106,9 +106,9 @@ const APPROACH_CARDS = [
     ),
   },
   {
-    title: "Sustainable Long-Term Growth",
+    title: "Vertically Integrated Execution",
     description:
-      "We build lasting value by acquiring assets with below-market rents and making strategic adjustments.",
+      "In-house property management, leasing, construction oversight, and accounting eliminate third-party friction and give us full lifecycle control of every asset from acquisition to disposition.",
     icon: (
       <svg
         width="40"
@@ -147,12 +147,12 @@ const APPROACH_CARDS = [
 ];
 
 const TARGET_GEOGRAPHIES = [
+  "Texas Triangle",
   "North Carolina",
   "Missouri",
   "Illinois",
   "Ohio",
   "Kansas",
-  "Texas",
 ];
 
 export default function StrategyPage() {
@@ -178,8 +178,7 @@ export default function StrategyPage() {
             Investment Strategy
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl font-[family-name:var(--font-inter)]">
-            Since 2020, we&apos;ve used clear, disciplined investment criteria to
-            guide every decision.
+            Three non-negotiable criteria govern every deployment of capital.
           </p>
         </div>
 
@@ -205,8 +204,8 @@ export default function StrategyPage() {
               Three Pillars of Our Strategy
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate sm:text-lg font-[family-name:var(--font-inter)]">
-              Our strategy focuses on three key components that work together to
-              protect capital and generate strong returns.
+              Every acquisition must satisfy all three criteria. No exceptions,
+              no committee overrides, no style drift.
             </p>
           </div>
 
@@ -264,7 +263,7 @@ export default function StrategyPage() {
               Our Approach
             </p>
             <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
-              How We Create Value
+              How We Execute
             </h2>
           </div>
 
@@ -311,9 +310,11 @@ export default function StrategyPage() {
                 Where We Invest
               </h2>
               <p className="mt-5 text-base leading-relaxed text-white/70 sm:text-lg font-[family-name:var(--font-inter)]">
-                Sago focuses on sourcing undervalued industrial and office assets
-                across the Southeast and lower Midwest. We are also actively
-                pursuing opportunistic development projects in Texas.
+                The Texas Triangle—Dallas–Fort Worth, Houston, San Antonio, and
+                Austin—is our primary hunting ground. We also pursue
+                opportunistic industrial and office acquisitions across the
+                Southeast and lower Midwest where we identify the same basis
+                advantage.
               </p>
 
               {/* Geography tags */}
@@ -321,7 +322,11 @@ export default function StrategyPage() {
                 {TARGET_GEOGRAPHIES.map((geo) => (
                   <span
                     key={geo}
-                    className="inline-block rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium tracking-wide text-white/80 font-[family-name:var(--font-inter)]"
+                    className={`inline-block rounded-full border px-4 py-2 text-sm font-medium tracking-wide font-[family-name:var(--font-inter)] ${
+                      geo === "Texas Triangle"
+                        ? "border-accent/40 bg-accent/10 text-accent"
+                        : "border-white/15 bg-white/5 text-white/80"
+                    }`}
                   >
                     {geo}
                   </span>
@@ -376,20 +381,21 @@ export default function StrategyPage() {
 
         <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
-            Partner With Us
+            Co-Investment
           </p>
           <h2 className="mt-4 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
-            Ready to explore partnership opportunities?
+            Seeking Co-Investment Partners
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-slate sm:text-lg font-[family-name:var(--font-inter)]">
-            We&apos;d love to discuss how Sago&apos;s disciplined approach can
-            work for your investment goals.
+            We co-invest meaningful GP capital alongside every limited partner.
+            If you&apos;re seeking differentiated exposure to Texas Triangle
+            commercial real estate, let&apos;s talk.
           </p>
           <Link
             href="/contact"
             className="mt-10 inline-block rounded bg-accent px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
           >
-            Contact Us
+            Start the Conversation
           </Link>
         </div>
       </section>

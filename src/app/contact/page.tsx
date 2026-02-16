@@ -4,11 +4,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Contact | Sago Capital",
   description:
-    "Get in touch with Sago Capital. Whether you're an investor, tenant, or partner, we'd love to hear from you. Located in College Station, Texas.",
+    "Contact Sago Capital for acquisition inquiries, investor relations, or brokerage services. Headquartered in College Station, Texas.",
 };
 
 const SUBJECT_OPTIONS = [
-  "Investment Inquiry",
+  "Investment / Co-Investment Inquiry",
+  "Acquisition Opportunity",
+  "Investor Relations",
   "Brokerage Services",
   "Development",
   "General Inquiry",
@@ -34,13 +36,13 @@ export default function ContactPage() {
 
             {/* Heading */}
             <h1 className="mt-6 font-[family-name:var(--font-nunito)] text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Get In Touch
+              Contact Sago Capital
             </h1>
 
             {/* Subtitle */}
             <p className="mt-6 font-[family-name:var(--font-inter)] text-lg leading-relaxed text-white/70 sm:text-xl">
-              Whether you&apos;re an investor, tenant, or partner, we&apos;d
-              love to hear from you.
+              For acquisition inquiries, investor relations, or brokerage
+              services.
             </p>
 
             {/* Decorative divider */}
@@ -130,7 +132,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Email */}
+                {/* Email - Acquisitions */}
                 <div className="flex gap-4">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-navy/5">
                     <svg
@@ -149,13 +151,43 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-[family-name:var(--font-inter)] text-sm font-semibold text-navy">
-                      Email
+                      Acquisitions
                     </p>
                     <a
-                      href="mailto:hello@sagocap.com"
+                      href="mailto:acquisitions@sagocap.com"
                       className="mt-1 inline-block font-[family-name:var(--font-inter)] text-base text-slate transition-colors duration-200 hover:text-accent"
                     >
-                      hello@sagocap.com
+                      acquisitions@sagocap.com
+                    </a>
+                  </div>
+                </div>
+
+                {/* Email - Investor Relations */}
+                <div className="flex gap-4">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-navy/5">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-5 w-5 text-navy/60"
+                      aria-hidden="true"
+                    >
+                      <rect x="2" y="4" width="20" height="16" rx="2" />
+                      <path d="M22 7l-10 7L2 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="font-[family-name:var(--font-inter)] text-sm font-semibold text-navy">
+                      Investor Relations
+                    </p>
+                    <a
+                      href="mailto:ir@sagocap.com"
+                      className="mt-1 inline-block font-[family-name:var(--font-inter)] text-base text-slate transition-colors duration-200 hover:text-accent"
+                    >
+                      ir@sagocap.com
                     </a>
                   </div>
                 </div>
@@ -474,17 +506,18 @@ export default function ContactPage() {
             Investors
           </p>
           <h2 className="mt-4 font-[family-name:var(--font-nunito)] text-2xl font-semibold text-navy sm:text-3xl">
-            Current Partners
+            Existing Investors
           </h2>
           <p className="mx-auto mt-4 max-w-xl font-[family-name:var(--font-inter)] text-base leading-relaxed text-slate">
-            Access your investment portal for financial information and updates.
+            Access quarterly reports, K-1s, and distribution history through our
+            secure investor portal.
           </p>
           <div className="mt-8">
             <Link
               href="#"
               className="inline-flex items-center gap-2 rounded bg-navy px-8 py-4 font-[family-name:var(--font-inter)] text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:bg-navy-light hover:shadow-lg hover:shadow-navy/20"
             >
-              Partner Portal
+              Investor Portal
               <svg
                 className="h-4 w-4"
                 viewBox="0 0 16 16"

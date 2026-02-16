@@ -16,25 +16,27 @@ const nunito = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Sago Capital | Commercial Real Estate & Investment",
+  title: "Sago Capital | Texas Triangle CRE Investment",
   description:
-    "Sago is a fully integrated commercial real estate and investment firm specializing in acquisitions, development, brokerage, and management. $80M+ in transactions. 30.9% avg net IRR.",
+    "Sago Capital acquires industrial and office assets below replacement cost across the Texas Triangle and beyond. $80M+ transaction volume. 30.9% realized net IRR.",
   keywords: [
-    "commercial real estate",
-    "real estate investment",
-    "CRE",
+    "commercial real estate investment",
+    "Texas Triangle CRE",
     "industrial real estate",
+    "office investment",
+    "value-add real estate",
     "sale-leaseback",
     "Sago Capital",
-    "Texas real estate",
+    "Texas commercial real estate",
+    "off-market acquisitions",
   ],
   icons: {
     icon: "/icon.svg",
   },
   openGraph: {
-    title: "Sago Capital | Commercial Real Estate & Investment",
+    title: "Sago Capital | Texas Triangle CRE Investment",
     description:
-      "A fully integrated CRE firm delivering 30.9% avg net IRR for investors across industrial and office assets.",
+      "Acquiring industrial and office assets below replacement cost. $80M+ transaction volume. 30.9% realized net IRR across the Texas Triangle and beyond.",
     url: "https://www.sagocap.com",
     siteName: "Sago Capital",
     type: "website",

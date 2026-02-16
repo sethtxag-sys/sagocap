@@ -1,17 +1,18 @@
 import Link from "next/link";
 
 const STATS = [
-  { value: "$80M+", label: "In Transactions" },
-  { value: "30.9%", label: "Avg Net IRR" },
+  { value: "$80M+", label: "Transaction Volume" },
+  { value: "30.9%", label: "Realized Net IRR" },
   { value: "1.5M+", label: "Square Feet" },
   { value: "1.57x", label: "Avg Equity Multiple" },
+  { value: "XXX.XXX", label: "DPI" }, // TODO: Replace with actual DPI — confirm with Seth
 ];
 
 const SERVICES = [
   {
     title: "Acquisitions",
     description:
-      "We source undervalued industrial and office assets across the Southeast and Midwest, acquiring below replacement cost to generate immediate cash flow and long-term appreciation.",
+      "Off-market sourcing via direct-to-owner campaigns targeting industrial and office assets below replacement cost. We specialize in complex capital structures, distressed seller situations, and sale-leasebacks where speed and certainty of close create a competitive edge.",
     icon: (
       <svg
         width="40"
@@ -125,7 +126,7 @@ const SERVICES = [
   {
     title: "Development",
     description:
-      "We pursue opportunistic development projects in Texas, creating value through strategic ground-up construction in high-growth markets.",
+      "Opportunistic ground-up construction in high-growth Texas Triangle corridors. We target projects where entitlement complexity or zoning constraints create barriers to entry and outsized risk-adjusted returns.",
     icon: (
       <svg
         width="40"
@@ -184,9 +185,9 @@ const SERVICES = [
     ),
   },
   {
-    title: "Ventures",
+    title: "Asset Management",
     description:
-      "We identify and operate complementary business ventures, leveraging our real estate expertise to create diversified returns for our partners.",
+      "Vertically integrated property management, leasing, and capital improvement execution. We control the full lifecycle of every investment — from lease-up to disposition — ensuring alignment between operations and investor returns.",
     icon: (
       <svg
         width="40"
@@ -196,36 +197,30 @@ const SERVICES = [
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
-        <circle cx="20" cy="14" r="8" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="12" cy="28" r="6" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="28" cy="28" r="6" stroke="currentColor" strokeWidth="1.5" />
-        <line
-          x1="15"
-          y1="20"
-          x2="13"
-          y2="23"
+        <rect
+          x="8"
+          y="12"
+          width="24"
+          height="24"
+          rx="1"
           stroke="currentColor"
           strokeWidth="1.5"
-          strokeLinecap="round"
         />
-        <line
-          x1="25"
-          y1="20"
-          x2="27"
-          y2="23"
+        <path
+          d="M14 12V6h12v6"
           stroke="currentColor"
           strokeWidth="1.5"
-          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <line
-          x1="18"
-          y1="28"
-          x2="22"
-          y2="28"
+          x1="8"
+          y1="22"
+          x2="32"
+          y2="22"
           stroke="currentColor"
           strokeWidth="1.5"
-          strokeLinecap="round"
         />
+        <circle cx="20" cy="22" r="3" stroke="currentColor" strokeWidth="1.5" />
       </svg>
     ),
   },
@@ -234,45 +229,53 @@ const SERVICES = [
 const PRINCIPLES = [
   {
     number: 1,
-    title: "Low Cost Per SF",
+    title: "Off-Market Sourcing Advantage",
     description:
-      "We acquire assets at a significant discount to replacement cost, building in a margin of safety from day one.",
+      "Direct-to-owner campaigns and broker relationships surface deals before they hit the market. We underwrite 200+ opportunities per quarter to execute on fewer than 5 — targeting industrial and office assets priced at 40–60% of replacement cost.",
   },
   {
     number: 2,
-    title: "Immediate Cash Flow",
+    title: "Basis Reset Through Execution",
     description:
-      "Every acquisition must generate positive cash flow from close, providing downside protection while we execute our value-add plan.",
+      "Aggressive lease-up of vacancy, strategic capex deployment, and NNN conversions generate immediate cash flow from close. Every acquisition must distribute within 90 days.",
   },
   {
     number: 3,
-    title: "Below Market Rents",
+    title: "Forced Appreciation Engine",
     description:
-      "We target properties with in-place rents below market, giving us a clear path to organic income growth over the hold period.",
+      "Below-market rents at acquisition create embedded upside. We capture it through mark-to-market lease rollovers, zoning and entitlement arbitrage, and highest-and-best-use repositioning.",
   },
 ];
 
 const DEALS = [
   {
     name: "Peachtree",
+    strategy: "Deep Value-Add | Recapitalization",
+    vintage: "2019", // TODO: Confirm vintage year
     irr: "41.1%",
     moic: "1.89x",
     holdPeriod: "59 Months+",
   },
   {
     name: "Gray Fox",
+    strategy: "Opportunistic Flip | Market Timing",
+    vintage: "2022", // TODO: Confirm vintage year
     irr: "40.3%",
     moic: "1.53x",
     holdPeriod: "15 Months",
   },
   {
     name: "H6S",
+    strategy: "Land Banking | Entitlement",
+    vintage: "2021", // TODO: Confirm vintage year
     irr: "36.3%",
     moic: "1.80x",
     holdPeriod: "22 Months",
   },
   {
     name: "Columbia",
+    strategy: "Value-Add Office | Lease-Up",
+    vintage: "2021", // TODO: Confirm vintage year
     irr: "24.8%",
     moic: "1.72x",
     holdPeriod: "32 Months",
@@ -280,12 +283,9 @@ const DEALS = [
 ];
 
 const TEAM = [
-  { name: "Barry Moore", title: "Principal" },
-  { name: "Jasen Coots", title: "Principal" },
-  { name: "Joe White", title: "Principal" },
-  { name: "Matt Johnson", title: "Principal" },
-  { name: "Seth McKinney", title: "Principal" },
-  { name: "Jack Parker", title: "Partner" },
+  { name: "Seth McKinney", title: "Principal — Acquisitions & Capital Markets" },
+  { name: "Barry Moore", title: "Principal — Capital Markets" },
+  { name: "Matt Johnson", title: "Principal — Asset Management" },
 ];
 
 export default function Home() {
@@ -308,15 +308,14 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-32 pb-20 text-center lg:px-8">
           <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-nunito)]">
-            Preserving Capital.
+            High-Velocity Value Creation
             <br />
-            Delivering Returns.
+            in the Texas Triangle
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl font-[family-name:var(--font-inter)]">
-            Sago is a fully integrated commercial real estate and investment
-            firm specializing in acquisitions, development, and strategic
-            ventures.
+            Aggressive acquisition of industrial and office assets below
+            replacement cost.
           </p>
 
           {/* CTAs */}
@@ -325,7 +324,7 @@ export default function Home() {
               href="/portfolio"
               className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
             >
-              View Our Track Record
+              Explore Our Track Record
             </Link>
             <Link
               href="/contact"
@@ -339,7 +338,7 @@ export default function Home() {
         {/* Stats bar */}
         <div className="relative z-10 w-full px-6 pb-16 lg:px-8">
           <div className="mx-auto max-w-5xl rounded-lg border border-white/10 bg-white/5 px-6 py-8 backdrop-blur-sm sm:px-10 sm:py-10">
-            <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-4">
+            <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5 md:gap-4">
               {STATS.map((stat) => (
                 <div key={stat.label} className="text-center">
                   <p className="stat-number text-3xl font-bold tracking-tight text-accent sm:text-4xl font-[family-name:var(--font-inter)]">
@@ -364,7 +363,7 @@ export default function Home() {
               What We Do
             </p>
             <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
-              A Fully Integrated CRE Platform
+              Three Core Capabilities
             </h2>
           </div>
 
@@ -408,8 +407,8 @@ export default function Home() {
                 Investment Thesis
               </p>
               <h2 className="mt-4 text-3xl font-bold leading-snug text-white sm:text-4xl lg:text-[2.75rem] lg:leading-snug font-[family-name:var(--font-nunito)]">
-                Since 2020, we&apos;ve used clear, disciplined criteria to guide
-                every investment.
+                Since 2020, three non-negotiable criteria have governed every
+                deployment of capital.
               </h2>
               <Link
                 href="/strategy"
@@ -467,6 +466,9 @@ export default function Home() {
                   <h3 className="text-lg font-bold tracking-wide text-white font-[family-name:var(--font-nunito)]">
                     {deal.name}
                   </h3>
+                  <p className="mt-1 text-xs font-medium tracking-wide text-accent/80 font-[family-name:var(--font-inter)]">
+                    {deal.strategy}
+                  </p>
                 </div>
 
                 {/* Card body */}
@@ -492,7 +494,7 @@ export default function Home() {
                         {deal.holdPeriod}
                       </p>
                       <p className="text-[0.65rem] font-medium uppercase tracking-widest text-slate font-[family-name:var(--font-inter)]">
-                        Hold Period
+                        Hold (V{deal.vintage})
                       </p>
                     </div>
                   </div>
@@ -507,7 +509,7 @@ export default function Home() {
               href="/portfolio"
               className="inline-block rounded bg-navy px-8 py-3.5 text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:bg-navy-light hover:shadow-lg font-[family-name:var(--font-inter)]"
             >
-              View Full Portfolio
+              View Full Track Record
             </Link>
           </div>
         </div>
@@ -596,18 +598,18 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto max-w-3xl px-6 text-center lg:px-8">
           <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
-            Ready to Partner With Us?
+            Start the Conversation
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/60 font-[family-name:var(--font-inter)]">
-            Whether you&apos;re an investor seeking strong risk-adjusted returns
-            or a business exploring a sale-leaseback, we&apos;d like to hear
-            from you.
+            We partner with family offices, HNW individuals, and institutional
+            allocators seeking differentiated exposure to Texas Triangle
+            commercial real estate.
           </p>
           <Link
             href="/contact"
             className="mt-10 inline-block rounded bg-accent px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
           >
-            Get in Touch
+            Explore Opportunities
           </Link>
         </div>
       </section>

@@ -12,7 +12,7 @@ interface NavLink {
 const NAV_LINKS: NavLink[] = [
   { label: "About", href: "/about" },
   { label: "Strategy", href: "/strategy" },
-  { label: "Portfolio", href: "/portfolio" },
+  { label: "Track Record", href: "/portfolio" },
   { label: "Team", href: "/team" },
 ];
 
@@ -90,8 +90,14 @@ export default function Navigation() {
                 </Link>
               ))}
               <Link
+                href="#"
+                className="ml-4 inline-block rounded border border-white/30 px-5 py-2.5 text-sm font-medium tracking-wide text-white/80 transition-all duration-300 hover:border-white hover:text-white hover:bg-white/5"
+              >
+                Investor Login
+              </Link>
+              <Link
                 href={CTA_LINK.href}
-                className="ml-4 inline-block rounded bg-accent px-6 py-2.5 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-md hover:shadow-accent/20"
+                className="ml-2 inline-block rounded bg-accent px-6 py-2.5 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-md hover:shadow-accent/20"
               >
                 {CTA_LINK.label}
               </Link>
@@ -166,12 +172,25 @@ export default function Navigation() {
             </Link>
           ))}
           <Link
+            href="#"
+            onClick={closeMobileMenu}
+            className="text-lg font-light tracking-widest text-white/60 transition-colors duration-300 hover:text-white"
+            style={{
+              transitionDelay: isMobileMenuOpen
+                ? `${100 + NAV_LINKS.length * 50}ms`
+                : "0ms",
+            }}
+            tabIndex={isMobileMenuOpen ? 0 : -1}
+          >
+            Investor Login
+          </Link>
+          <Link
             href={CTA_LINK.href}
             onClick={closeMobileMenu}
             className="mt-4 rounded bg-accent px-10 py-3.5 text-lg font-semibold tracking-widest text-navy transition-all duration-300 hover:bg-accent-light"
             style={{
               transitionDelay: isMobileMenuOpen
-                ? `${100 + NAV_LINKS.length * 50}ms`
+                ? `${100 + (NAV_LINKS.length + 1) * 50}ms`
                 : "0ms",
             }}
             tabIndex={isMobileMenuOpen ? 0 : -1}
