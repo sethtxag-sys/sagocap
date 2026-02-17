@@ -1,10 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+/*
+ * ──────────────────────────────────────────────────────────────
+ *  STORYBRAND MAPPING — ABOUT PAGE
+ *  Role: Guide (empathy + authority)
+ *
+ *  Hero     → "We understand what it's like to deploy capital without alignment"
+ *  Story    → Guide credentials (founded on conviction, built through discipline)
+ *  Values   → Empathy proof (integrity, discipline, partnership)
+ *  Community→ Authority proof (civic leadership, institutional affiliations)
+ *  CTA      → "Schedule a Call" (direct) + "Review Our Track Record" (transitional)
+ * ──────────────────────────────────────────────────────────────
+ */
+
 export const metadata: Metadata = {
   title: "About | Sago Capital",
   description:
-    "Sago Capital is a vertically integrated commercial real estate platform headquartered in College Station, Texas. Acquisitions, development, brokerage, and management under one banner.",
+    "Sago Capital is a vertically integrated CRE platform built on discipline, execution, and true alignment with investors. Every principal invests personal capital alongside yours.",
 };
 
 function ShieldIcon({ className }: { className?: string }) {
@@ -65,19 +78,19 @@ const VALUES = [
     icon: ShieldIcon,
     title: "Integrity",
     description:
-      "We value the trust of our investors and strive to create meaningful, lasting value through every project.",
+      "Your trust is the foundation of everything we do. We invest our own capital alongside yours because alignment isn\u2019t a talking point — it\u2019s how we operate.",
   },
   {
     icon: TargetIcon,
     title: "Discipline",
     description:
-      "Guided by clear investment principles, we consistently deliver strong, risk-adjusted returns.",
+      "Every acquisition must pass all three pillars of our strategy. No exceptions, no committee overrides, no style drift. Your capital deserves that rigor.",
   },
   {
     icon: HandshakeIcon,
     title: "Partnership",
     description:
-      "We seek to be our partners\u2019 first and best resource for compelling opportunities in real property assets.",
+      "We don\u2019t have clients — we have partners. When you invest with Sago, you get direct access to the principals managing your capital, not a fund administrator.",
   },
 ];
 
@@ -86,7 +99,7 @@ const MEMBERSHIPS = ["CCIM", "SIOR", "NAIOP"];
 export default function AboutPage() {
   return (
     <div>
-      {/* ===== PAGE HERO ===== */}
+      {/* ===== PAGE HERO (GUIDE INTRODUCTION) ===== */}
       <section className="relative overflow-hidden bg-navy pt-32 pb-24 sm:pt-40 sm:pb-32">
         {/* Subtle gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-navy-dark/60 via-transparent to-navy-light/20" />
@@ -103,13 +116,15 @@ export default function AboutPage() {
 
             {/* Heading */}
             <h1 className="mt-6 font-[family-name:var(--font-nunito)] text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              About Sago
+              We Built Sago Because We Were Investors First
             </h1>
 
             {/* Subtitle */}
             <p className="mt-6 font-[family-name:var(--font-inter)] text-lg leading-relaxed text-white/70 sm:text-xl">
-              A vertically integrated commercial real estate platform built on
-              discipline, execution, and alignment with our investors.
+              Before we managed a single dollar of outside capital, we
+              experienced the same frustrations you have — misaligned sponsors,
+              opaque reporting, and strategies that prioritize AUM over returns.
+              Sago was built to be the firm we wished existed.
             </p>
 
             {/* Decorative divider */}
@@ -122,7 +137,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ===== OUR STORY ===== */}
+      {/* ===== OUR STORY (GUIDE CREDENTIALS) ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
@@ -135,29 +150,30 @@ export default function AboutPage() {
               <h2 className="mt-4 font-[family-name:var(--font-nunito)] text-3xl font-semibold leading-tight tracking-tight text-navy sm:text-4xl">
                 Independent. Texas-Based.
                 <br />
-                Built for the Long Term.
+                Built for Investors Like You.
               </h2>
 
               <div className="mt-8 space-y-5 font-[family-name:var(--font-inter)] text-base leading-relaxed text-slate sm:text-lg sm:leading-relaxed">
                 <p>
                   Sago Capital is an independent, Texas-based commercial real
-                  estate and investment firm headquartered in College Station,
-                  Texas &mdash; the heart of Aggieland. Founded in 2020, the
-                  firm was built on the conviction that disciplined underwriting
-                  and hands-on management create superior outcomes for investors.
+                  estate platform headquartered in College Station, Texas —
+                  the heart of Aggieland. Founded in 2020, the firm was built on
+                  the conviction that disciplined underwriting and hands-on
+                  management create superior outcomes for investors.
                 </p>
 
                 <p>
-                  Since the firm&apos;s inception in 2020, we have worked
-                  diligently to find excellent opportunities to grow wealth
-                  through real estate investment.
+                  We didn&apos;t start Sago to raise a fund. We started Sago
+                  because we saw a gap: investors who want off-market deal flow,
+                  operator-level execution, and true alignment don&apos;t have
+                  many options. We built those options.
                 </p>
 
                 <p>
                   In 2025, Sago consolidated all of its real estate-related
-                  companies &mdash; brokerage, development, and management
-                  &mdash; under one banner, creating a vertically integrated platform.
-                  Today, the firm operates four distinct business lines:{" "}
+                  companies — brokerage, development, and management — under one
+                  banner, creating a vertically integrated platform. Today, the
+                  firm operates four distinct business lines:{" "}
                   <span className="font-medium text-navy">acquisitions</span>,{" "}
                   <span className="font-medium text-navy">development</span>,{" "}
                   <span className="font-medium text-navy">brokerage</span>, and{" "}
@@ -165,18 +181,18 @@ export default function AboutPage() {
                 </p>
 
                 <p>
-                  This integrated structure allows Sago to control the full
-                  lifecycle of every investment, delivering transparency,
-                  efficiency, and alignment with our partners at every stage.
+                  This integrated structure allows us to control the full
+                  lifecycle of every investment — delivering transparency,
+                  efficiency, and alignment at every stage.
                 </p>
               </div>
 
               <div className="mt-10">
                 <Link
-                  href="/contact"
+                  href="/portfolio"
                   className="inline-flex items-center gap-2 rounded bg-navy px-7 py-3.5 font-[family-name:var(--font-inter)] text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:bg-navy-light hover:shadow-lg hover:shadow-navy/20"
                 >
-                  Start the Conversation
+                  Review Our Track Record
                   <svg
                     className="h-4 w-4"
                     viewBox="0 0 16 16"
@@ -227,17 +243,22 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ===== COMPANY VALUES ===== */}
+      {/* ===== COMPANY VALUES (EMPATHY) ===== */}
       <section className="bg-warm-white py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Section Header */}
           <div className="mx-auto max-w-2xl text-center">
             <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-accent">
-              What Drives Us
+              What We Believe
             </p>
             <h2 className="mt-4 font-[family-name:var(--font-nunito)] text-3xl font-semibold leading-tight tracking-tight text-navy sm:text-4xl">
-              Our Values
+              Values That Protect Your Capital
             </h2>
+            <p className="mt-4 font-[family-name:var(--font-inter)] text-base leading-relaxed text-slate sm:text-lg">
+              These aren&apos;t aspirational statements. They&apos;re the
+              operating principles that govern every decision we make with your
+              money.
+            </p>
             <div className="mt-6 flex items-center justify-center gap-3">
               <span className="h-px w-8 bg-accent/40" />
               <span className="h-1 w-1 rounded-full bg-accent" />
@@ -275,17 +296,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ===== COMMUNITY ENGAGEMENT ===== */}
+      {/* ===== COMMUNITY ENGAGEMENT (AUTHORITY) ===== */}
       <section className="relative overflow-hidden bg-navy py-20 sm:py-28">
         <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/40 via-transparent to-navy-dark/40" />
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-accent">
-              Community
+              Community &amp; Leadership
             </p>
             <h2 className="mt-4 font-[family-name:var(--font-nunito)] text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
-              Giving Back
+              Invested in More Than Real Estate
             </h2>
             <div className="mt-6 flex items-center justify-center gap-3">
               <span className="h-px w-8 bg-accent/40" />
@@ -295,10 +316,11 @@ export default function AboutPage() {
 
             <div className="mt-10 space-y-5 font-[family-name:var(--font-inter)] text-base leading-relaxed text-white/70 sm:text-lg sm:leading-relaxed">
               <p>
-                At Sago, we believe that meaningful investment extends beyond
-                commercial real estate. Our executives are deeply engaged in
-                civic leadership, local and state government, and non-profit
-                organizations across Texas.
+                Our principals are deeply engaged in civic leadership, local and
+                state government, and non-profit organizations across Texas.
+                This community involvement gives us ground-level intelligence on
+                zoning, infrastructure, and economic development — insights that
+                directly benefit our investors.
               </p>
               <p>
                 We are proud supporters of the Greater Brazos Partnership and
@@ -358,7 +380,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ===== MEMBERSHIPS ===== */}
+      {/* ===== MEMBERSHIPS (AUTHORITY PROOF) ===== */}
       <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
@@ -394,23 +416,26 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ===== BOTTOM CTA ===== */}
+      {/* ===== BOTTOM CTA (DIRECT + TRANSITIONAL) ===== */}
       <section className="border-t border-navy/5 bg-warm-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
-          <h2 className="font-[family-name:var(--font-nunito)] text-2xl font-semibold text-navy sm:text-3xl">
-            Start the Conversation
+          <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.3em] text-accent">
+            Next Step
+          </p>
+          <h2 className="mt-4 font-[family-name:var(--font-nunito)] text-2xl font-semibold text-navy sm:text-3xl">
+            Your Capital Deserves a Partner, Not a Manager
           </h2>
           <p className="mx-auto mt-4 max-w-xl font-[family-name:var(--font-inter)] text-base leading-relaxed text-slate">
             We partner with family offices, HNW individuals, and institutional
             allocators seeking differentiated exposure to Texas Triangle
-            commercial real estate.
+            commercial real estate — with true alignment at every level.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 rounded bg-accent px-8 py-4 font-[family-name:var(--font-inter)] text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20"
             >
-              Explore Opportunities
+              Schedule a Call
               <svg
                 className="h-4 w-4"
                 viewBox="0 0 16 16"
@@ -423,6 +448,12 @@ export default function AboutPage() {
               >
                 <path d="M3 8h10M9 4l4 4-4 4" />
               </svg>
+            </Link>
+            <Link
+              href="/portfolio"
+              className="inline-flex items-center gap-2 rounded border border-navy/20 px-8 py-4 font-[family-name:var(--font-inter)] text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:border-navy/40 hover:bg-navy/5"
+            >
+              Review Our Track Record
             </Link>
           </div>
         </div>

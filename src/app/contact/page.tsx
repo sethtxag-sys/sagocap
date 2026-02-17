@@ -36,13 +36,14 @@ export default function ContactPage() {
 
             {/* Heading */}
             <h1 className="mt-6 font-[family-name:var(--font-nunito)] text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Contact Sago Capital
+              Start the Conversation
             </h1>
 
             {/* Subtitle */}
             <p className="mt-6 font-[family-name:var(--font-inter)] text-lg leading-relaxed text-white/70 sm:text-xl">
-              For acquisition inquiries, investor relations, or brokerage
-              services.
+              Whether you&apos;re exploring co-investment opportunities,
+              submitting an acquisition lead, or need brokerage services —
+              you&apos;ll speak directly with a principal.
             </p>
 
             {/* Decorative divider */}
@@ -66,7 +67,7 @@ export default function ContactPage() {
               </p>
 
               <h2 className="mt-4 font-[family-name:var(--font-nunito)] text-3xl font-semibold leading-tight tracking-tight text-navy sm:text-4xl">
-                Visit Us
+                Talk to a Principal
               </h2>
 
               <div className="mt-6 flex items-center gap-3">
@@ -323,11 +324,11 @@ export default function ContactPage() {
             <div>
               <div className="rounded-xl border border-navy/5 bg-warm-white p-8 shadow-sm sm:p-10">
                 <h3 className="font-[family-name:var(--font-nunito)] text-2xl font-semibold text-navy">
-                  Send Us a Message
+                  Schedule a Call
                 </h3>
                 <p className="mt-2 font-[family-name:var(--font-inter)] text-sm text-slate">
-                  Fill out the form below and we&apos;ll get back to you
-                  promptly.
+                  Tell us about your investment goals and a principal will
+                  respond within one business day.
                 </p>
 
                 <form action="#" method="POST" className="mt-8 space-y-6">
@@ -509,8 +510,8 @@ export default function ContactPage() {
             Existing Investors
           </h2>
           <p className="mx-auto mt-4 max-w-xl font-[family-name:var(--font-inter)] text-base leading-relaxed text-slate">
-            Access quarterly reports, K-1s, and distribution history through our
-            secure investor portal.
+            Access quarterly reports, K-1s, distribution history, and asset
+            performance updates through our secure investor portal.
           </p>
           <div className="mt-8">
             <Link

@@ -16,7 +16,7 @@ const NAV_LINKS: NavLink[] = [
   { label: "Team", href: "/team" },
 ];
 
-const CTA_LINK: NavLink = { label: "Contact", href: "/contact" };
+const CTA_LINK: NavLink = { label: "Schedule a Call", href: "/contact" };
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);

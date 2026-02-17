@@ -1,10 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+/*
+ * ──────────────────────────────────────────────────────────────
+ *  STORYBRAND MAPPING — TRACK RECORD PAGE
+ *  Role: Success (proof of what partnership looks like)
+ *
+ *  Hero     → "This is what your partnership could look like"
+ *  Stats    → Proof of performance (metrics that matter to allocators)
+ *  Exits    → Each deal tells a story of capital deployed + returned
+ *  Holdings → Current portfolio = where your capital could be working now
+ *  CTA      → "Schedule a Call" (direct) + clear next step
+ * ──────────────────────────────────────────────────────────────
+ */
+
 export const metadata: Metadata = {
   title: "Track Record | Sago Capital",
   description:
-    "Sago Capital has deployed over $80M across industrial and office acquisitions since 2019, generating a 30.9% realized net IRR and 1.57x average equity multiple.",
+    "Over $80M deployed since 2019 with a 30.9% realized net IRR and 1.57x average equity multiple. See what partnership with Sago Capital looks like.",
 };
 
 /* ------------------------------------------------------------------ */
@@ -222,7 +235,7 @@ export default function PortfolioPage() {
   return (
     <>
       {/* ============================================================ */}
-      {/*  1. PAGE HERO                                                 */}
+      {/*  1. PAGE HERO — "THIS IS WHAT SUCCESS LOOKS LIKE"             */}
       {/* ============================================================ */}
       <section className="relative overflow-hidden bg-navy pb-20 pt-36 sm:pb-28 sm:pt-44">
         {/* Subtle background pattern */}
@@ -240,22 +253,22 @@ export default function PortfolioPage() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-accent">
-              Track Record
+              Proof of Performance
             </p>
             <h1 className="font-[family-name:var(--font-nunito)] text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-              Track Record
+              This Is What Partnership Looks Like
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-white/70 sm:text-xl">
               Since 2019, Sago has deployed over $80&nbsp;million across
-              industrial and office acquisitions in the Texas Triangle and
-              beyond.
+              industrial and office acquisitions — returning capital to investors
+              at a 30.9% realized net IRR.
             </p>
           </div>
         </div>
       </section>
 
       {/* ============================================================ */}
-      {/*  2. KEY METRICS BAR                                           */}
+      {/*  2. KEY METRICS BAR — AUTHORITY PROOF                         */}
       {/* ============================================================ */}
       <section className="relative bg-gradient-to-br from-accent/10 via-warm-white to-accent/5">
         <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-16">
@@ -280,7 +293,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* ============================================================ */}
-      {/*  3. REALIZED EXITS                                            */}
+      {/*  3. REALIZED EXITS — SUCCESS STORIES                          */}
       {/* ============================================================ */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -288,15 +301,16 @@ export default function PortfolioPage() {
           <div className="mb-14 sm:mb-16">
             <div className="flex items-center gap-3">
               <h2 className="font-[family-name:var(--font-nunito)] text-3xl font-bold text-navy sm:text-4xl">
-                Realized Investments
+                Capital Deployed &amp; Returned
               </h2>
               <span className="inline-flex items-center rounded-full bg-accent/15 px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-accent">
                 Exits
               </span>
             </div>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate sm:text-lg">
-              Sago has exited six investments totaling over $30&nbsp;million,
-              held for an average of approximately three&nbsp;years.
+              Each exit below represents a complete cycle: capital deployed,
+              value created through execution, and returns distributed to our
+              partners.
             </p>
           </div>
 
@@ -382,7 +396,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* ============================================================ */}
-      {/*  4. CURRENT HOLDINGS                                          */}
+      {/*  4. CURRENT HOLDINGS — WHERE YOUR CAPITAL COULD WORK          */}
       {/* ============================================================ */}
       <section className="bg-warm-white py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -396,6 +410,11 @@ export default function PortfolioPage() {
                 Active
               </span>
             </div>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate sm:text-lg">
+              Active investments where our strategy is being executed today.
+              These assets represent the type of opportunities your capital
+              could access.
+            </p>
           </div>
 
           {/* Holdings grid */}
@@ -451,18 +470,24 @@ export default function PortfolioPage() {
       </section>
 
       {/* ============================================================ */}
-      {/*  5. CTA                                                       */}
+      {/*  5. CTA — DIRECT + TRANSITIONAL                               */}
       {/* ============================================================ */}
       <section className="bg-gradient-to-r from-accent via-accent-light to-accent">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-12 sm:flex-row lg:px-8 lg:py-14">
-          <p className="max-w-lg text-center font-[family-name:var(--font-nunito)] text-xl font-semibold text-navy sm:text-left sm:text-2xl">
-            Seeking co-investment partners for our next acquisition.
-          </p>
+          <div className="max-w-lg text-center sm:text-left">
+            <p className="font-[family-name:var(--font-nunito)] text-xl font-semibold text-navy sm:text-2xl">
+              Ready to see what your capital can do?
+            </p>
+            <p className="mt-2 text-sm text-navy/70 font-[family-name:var(--font-inter)]">
+              Schedule a call with a principal to discuss co-investment
+              opportunities.
+            </p>
+          </div>
           <Link
             href="/contact"
             className="inline-flex shrink-0 items-center gap-2 rounded bg-navy px-8 py-3.5 text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:bg-navy-dark hover:shadow-lg hover:shadow-navy/30"
           >
-            Start the Conversation
+            Schedule a Call
             <ArrowRightIcon className="h-4 w-4" />
           </Link>
         </div>

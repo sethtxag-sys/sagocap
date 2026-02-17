@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Our Team | Sago Capital",
   description:
-    "Sago Capital is led by operators with functional specialization across acquisitions, capital markets, asset management, operations, and development.",
+    "Five principals with skin in the game. Sago Capital's leadership team brings functional specialization across acquisitions, capital markets, asset management, operations, and development.",
 };
 
 const PRINCIPALS = [
@@ -37,12 +37,6 @@ const PRINCIPALS = [
     title: "Principal — Development",
     email: "jwhite@sagocap.com",
     credentials: "", // TODO: add credentials
-  },
-  {
-    name: "Jack Parker",
-    title: "Partner",
-    email: undefined,
-    credentials: "",
   },
 ];
 
@@ -134,11 +128,14 @@ export default function TeamPage() {
         />
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-8">
           <h1 className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl font-[family-name:var(--font-nunito)]">
-            Our Team
+            Your Capital Deserves Operators,
+            <br />
+            Not Managers
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl font-[family-name:var(--font-inter)]">
-            Operators with functional specialization across acquisitions,
-            capital markets, asset management, operations, and development.
+            Five principals with functional specialization across acquisitions,
+            capital markets, asset management, operations, and development —
+            each with skin in the game on every deal.
           </p>
         </div>
       </section>
@@ -152,7 +149,7 @@ export default function TeamPage() {
               Leadership
             </p>
             <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
-              Principals &amp; Partners
+              Principals
             </h2>
           </div>
 
@@ -247,8 +244,8 @@ export default function TeamPage() {
 
           {/* Caption */}
           <p className="mx-auto mt-8 max-w-2xl text-center text-base leading-relaxed text-white/60 font-[family-name:var(--font-inter)]">
-            A vertically integrated team executing across the full lifecycle of
-            every investment.
+            Every principal invests personal capital alongside yours. That&apos;s
+            alignment you can measure.
           </p>
         </div>
       </section>
@@ -256,15 +253,30 @@ export default function TeamPage() {
       {/* ──────────────── CTA ──────────────── */}
       <section className="bg-white py-24 sm:py-28">
         <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
-          <h2 className="text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
-            Interested in co-investing or exploring career opportunities?
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
+            Next Step
+          </p>
+          <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
+            Meet the Team Behind Your Next Investment
           </h2>
-          <Link
-            href="/contact"
-            className="mt-10 inline-block rounded bg-accent px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
-          >
-            Start the Conversation
-          </Link>
+          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-slate sm:text-lg font-[family-name:var(--font-inter)]">
+            Schedule a call to discuss how our team&apos;s operational
+            expertise translates into outsized returns for our limited partners.
+          </p>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="/contact"
+              className="inline-block rounded bg-accent px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
+            >
+              Schedule a Call
+            </Link>
+            <Link
+              href="/portfolio"
+              className="inline-block rounded border border-navy/20 px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:border-navy/40 hover:bg-navy/5 font-[family-name:var(--font-inter)]"
+            >
+              Review Our Track Record
+            </Link>
+          </div>
         </div>
       </section>
     </>

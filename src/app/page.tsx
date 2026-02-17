@@ -1,5 +1,16 @@
 import Link from "next/link";
 
+/* ────────────────────────────────────────────────────────────────────────────
+   StoryBrand Framework applied to PERE:
+   ─ Hero/Character  = The LP / Investor (you)
+   ─ Problem         = Can't access off-market deal flow; fear of style drift
+   ─ Guide           = Sago Capital (empathy + authority)
+   ─ Plan            = 3-step co-investment process
+   ─ CTA             = Direct: "Schedule a Call" | Transitional: "Review Track Record"
+   ─ Failure         = Settling for market-rate returns
+   ─ Success         = Outsized distributions, true alignment
+   ──────────────────────────────────────────────────────────────────────────── */
+
 const STATS = [
   { value: "$80M+", label: "Transaction Volume" },
   { value: "30.9%", label: "Realized Net IRR" },
@@ -12,7 +23,7 @@ const SERVICES = [
   {
     title: "Acquisitions",
     description:
-      "Off-market sourcing via direct-to-owner campaigns targeting industrial and office assets below replacement cost. We specialize in complex capital structures, distressed seller situations, and sale-leasebacks where speed and certainty of close create a competitive edge.",
+      "We source deals you won't find on the market. Direct-to-owner campaigns, distressed seller situations, and sale-leasebacks — acquired at 40–60% of replacement cost so your capital starts with a built-in margin of safety.",
     icon: (
       <svg
         width="40"
@@ -22,111 +33,24 @@ const SERVICES = [
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
-        <rect
-          x="4"
-          y="16"
-          width="14"
-          height="20"
-          rx="1"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        />
-        <rect
-          x="22"
-          y="8"
-          width="14"
-          height="28"
-          rx="1"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        />
-        <line
-          x1="18"
-          y1="26"
-          x2="22"
-          y2="26"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        />
-        <line
-          x1="8"
-          y1="22"
-          x2="14"
-          y2="22"
-          stroke="currentColor"
-          strokeWidth="1.2"
-          strokeLinecap="round"
-        />
-        <line
-          x1="8"
-          y1="26"
-          x2="14"
-          y2="26"
-          stroke="currentColor"
-          strokeWidth="1.2"
-          strokeLinecap="round"
-        />
-        <line
-          x1="8"
-          y1="30"
-          x2="14"
-          y2="30"
-          stroke="currentColor"
-          strokeWidth="1.2"
-          strokeLinecap="round"
-        />
-        <line
-          x1="26"
-          y1="14"
-          x2="32"
-          y2="14"
-          stroke="currentColor"
-          strokeWidth="1.2"
-          strokeLinecap="round"
-        />
-        <line
-          x1="26"
-          y1="18"
-          x2="32"
-          y2="18"
-          stroke="currentColor"
-          strokeWidth="1.2"
-          strokeLinecap="round"
-        />
-        <line
-          x1="26"
-          y1="22"
-          x2="32"
-          y2="22"
-          stroke="currentColor"
-          strokeWidth="1.2"
-          strokeLinecap="round"
-        />
-        <line
-          x1="26"
-          y1="26"
-          x2="32"
-          y2="26"
-          stroke="currentColor"
-          strokeWidth="1.2"
-          strokeLinecap="round"
-        />
-        <line
-          x1="26"
-          y1="30"
-          x2="32"
-          y2="30"
-          stroke="currentColor"
-          strokeWidth="1.2"
-          strokeLinecap="round"
-        />
+        <rect x="4" y="16" width="14" height="20" rx="1" stroke="currentColor" strokeWidth="1.5" />
+        <rect x="22" y="8" width="14" height="28" rx="1" stroke="currentColor" strokeWidth="1.5" />
+        <line x1="18" y1="26" x2="22" y2="26" stroke="currentColor" strokeWidth="1.5" />
+        <line x1="8" y1="22" x2="14" y2="22" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        <line x1="8" y1="26" x2="14" y2="26" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        <line x1="8" y1="30" x2="14" y2="30" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        <line x1="26" y1="14" x2="32" y2="14" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        <line x1="26" y1="18" x2="32" y2="18" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        <line x1="26" y1="22" x2="32" y2="22" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        <line x1="26" y1="26" x2="32" y2="26" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        <line x1="26" y1="30" x2="32" y2="30" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
       </svg>
     ),
   },
   {
     title: "Development",
     description:
-      "Opportunistic ground-up construction in high-growth Texas Triangle corridors. We target projects where entitlement complexity or zoning constraints create barriers to entry and outsized risk-adjusted returns.",
+      "Ground-up construction in high-growth Texas Triangle corridors where entitlement complexity keeps institutional capital on the sidelines — and keeps returns elevated for our partners.",
     icon: (
       <svg
         width="40"
@@ -136,58 +60,19 @@ const SERVICES = [
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
-        <path
-          d="M6 36h28"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        <path
-          d="M10 36V18l10-10 10 10v18"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
-        <rect
-          x="16"
-          y="24"
-          width="8"
-          height="12"
-          rx="0.5"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        />
-        <rect
-          x="14"
-          y="16"
-          width="5"
-          height="5"
-          rx="0.5"
-          stroke="currentColor"
-          strokeWidth="1.2"
-        />
-        <rect
-          x="22"
-          y="16"
-          width="5"
-          height="5"
-          rx="0.5"
-          stroke="currentColor"
-          strokeWidth="1.2"
-        />
-        <path
-          d="M20 8V4"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
+        <path d="M6 36h28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M10 36V18l10-10 10 10v18" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+        <rect x="16" y="24" width="8" height="12" rx="0.5" stroke="currentColor" strokeWidth="1.5" />
+        <rect x="14" y="16" width="5" height="5" rx="0.5" stroke="currentColor" strokeWidth="1.2" />
+        <rect x="22" y="16" width="5" height="5" rx="0.5" stroke="currentColor" strokeWidth="1.2" />
+        <path d="M20 8V4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
   },
   {
     title: "Asset Management",
     description:
-      "Vertically integrated property management, leasing, and capital improvement execution. We control the full lifecycle of every investment — from lease-up to disposition — ensuring alignment between operations and investor returns.",
+      "We don't outsource your returns. In-house property management, leasing, and capex execution give us full lifecycle control — so every dollar of NOI goes toward building your equity, not paying third-party fees.",
     icon: (
       <svg
         width="40"
@@ -197,29 +82,9 @@ const SERVICES = [
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
-        <rect
-          x="8"
-          y="12"
-          width="24"
-          height="24"
-          rx="1"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        />
-        <path
-          d="M14 12V6h12v6"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
-        <line
-          x1="8"
-          y1="22"
-          x2="32"
-          y2="22"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        />
+        <rect x="8" y="12" width="24" height="24" rx="1" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M14 12V6h12v6" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+        <line x1="8" y1="22" x2="32" y2="22" stroke="currentColor" strokeWidth="1.5" />
         <circle cx="20" cy="22" r="3" stroke="currentColor" strokeWidth="1.5" />
       </svg>
     ),
@@ -231,19 +96,19 @@ const PRINCIPLES = [
     number: 1,
     title: "Off-Market Sourcing Advantage",
     description:
-      "Direct-to-owner campaigns and broker relationships surface deals before they hit the market. We underwrite 200+ opportunities per quarter to execute on fewer than 5 — targeting industrial and office assets priced at 40–60% of replacement cost.",
+      "We underwrite 200+ opportunities per quarter to execute on fewer than 5. Direct-to-owner campaigns surface industrial and office assets at 40–60% of replacement cost — before they ever hit the market.",
   },
   {
     number: 2,
     title: "Basis Reset Through Execution",
     description:
-      "Aggressive lease-up of vacancy, strategic capex deployment, and NNN conversions generate immediate cash flow from close. Every acquisition must distribute within 90 days.",
+      "Aggressive lease-up, targeted capex, and NNN conversions generate immediate cash flow. Your capital starts working from day one — investors historically receive distributions within 90 days of closing.",
   },
   {
     number: 3,
     title: "Forced Appreciation Engine",
     description:
-      "Below-market rents at acquisition create embedded upside. We capture it through mark-to-market lease rollovers, zoning and entitlement arbitrage, and highest-and-best-use repositioning.",
+      "Below-market rents at acquisition create embedded upside. We capture it through mark-to-market rollovers, zoning arbitrage, and highest-and-best-use repositioning — manufacturing alpha, not waiting for it.",
   },
 ];
 
@@ -282,21 +147,43 @@ const DEALS = [
   },
 ];
 
+const PLAN_STEPS = [
+  {
+    step: 1,
+    title: "Review Our Track Record",
+    description:
+      "Examine our realized exits, current holdings, and the discipline behind every deployment of capital.",
+  },
+  {
+    step: 2,
+    title: "Schedule a Call",
+    description:
+      "Speak directly with a principal about our current pipeline, fund structure, and co-investment terms.",
+  },
+  {
+    step: 3,
+    title: "Invest with Confidence",
+    description:
+      "Deploy capital alongside ours into off-market assets with distributions that typically begin within 90 days.",
+  },
+];
+
 const TEAM = [
-  { name: "Seth McKinney", title: "Principal — Acquisitions & Capital Markets" },
-  { name: "Barry Moore", title: "Principal — Capital Markets" },
-  { name: "Matt Johnson", title: "Principal — Asset Management" },
+  { name: "Seth McKinney", title: "Acquisitions & Capital Markets" },
+  { name: "Barry Moore", title: "Capital Markets" },
+  { name: "Matt Johnson", title: "Asset Management" },
+  { name: "Jasen Coots", title: "Operations" },
+  { name: "Joe White", title: "Development" },
 ];
 
 export default function Home() {
   return (
     <>
-      {/* ───────────────────────── HERO ───────────────────────── */}
+      {/* ═══════════════════ HERO (Character: The LP) ═══════════════════ */}
       <section
         id="hero"
         className="relative flex min-h-screen flex-col items-center justify-center bg-navy-dark"
       >
-        {/* Gradient overlay */}
         <div
           className="pointer-events-none absolute inset-0"
           aria-hidden="true"
@@ -308,34 +195,34 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-32 pb-20 text-center lg:px-8">
           <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-nunito)]">
-            High-Velocity Value Creation
+            Your Capital Should Generate Alpha
             <br />
-            in the Texas Triangle
+            <span className="text-accent">&mdash; Not Sit on the Sidelines</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl font-[family-name:var(--font-inter)]">
-            Aggressive acquisition of industrial and office assets below
-            replacement cost.
+            Most investors never see the Texas Triangle&apos;s best deals.
+            We acquire industrial and office assets at 40&ndash;60% of replacement
+            cost &mdash; and put your capital to work from day one.
           </p>
 
-          {/* CTAs */}
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="/portfolio"
+              href="/contact"
               className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
             >
-              Explore Our Track Record
+              Schedule a Call
             </Link>
             <Link
-              href="/contact"
+              href="/portfolio"
               className="inline-block rounded border border-white/30 px-8 py-3.5 text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:border-white hover:bg-white/5 font-[family-name:var(--font-inter)]"
             >
-              Contact Us
+              Review Our Track Record
             </Link>
           </div>
         </div>
 
-        {/* Stats bar */}
+        {/* Stats bar (Guide: Authority) */}
         <div className="relative z-10 w-full px-6 pb-16 lg:px-8">
           <div className="mx-auto max-w-5xl rounded-lg border border-white/10 bg-white/5 px-6 py-8 backdrop-blur-sm sm:px-10 sm:py-10">
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5 md:gap-4">
@@ -354,40 +241,91 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ───────────────── WHAT WE DO / SERVICES ───────────────── */}
-      <section id="about" className="bg-warm-white py-24 sm:py-28">
+      {/* ═══════════════ THE PROBLEM (what investors face) ═══════════════ */}
+      <section className="bg-warm-white py-24 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Section header */}
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
-              What We Do
+              The Problem
             </p>
             <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
-              Three Core Capabilities
+              The Best Deals Never Hit the Market
             </h2>
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate sm:text-lg font-[family-name:var(--font-inter)]">
+              Marketed deal flow is picked over by the time you see it. Passive
+              LP structures give you zero visibility into operations. And most
+              sponsors prioritize AUM growth over investor returns. You deserve
+              better &mdash; and you know it.
+            </p>
           </div>
 
-          {/* Service cards */}
+          <div className="mt-16 grid gap-8 sm:grid-cols-3">
+            <div className="rounded-lg border border-navy/5 bg-white p-8 text-center">
+              <p className="text-sm font-bold uppercase tracking-wide text-red-500/80 font-[family-name:var(--font-inter)]">
+                External Problem
+              </p>
+              <p className="mt-3 text-base leading-relaxed text-slate font-[family-name:var(--font-inter)]">
+                &ldquo;I can&apos;t access the off-market deal flow where the
+                real alpha lives.&rdquo;
+              </p>
+            </div>
+            <div className="rounded-lg border border-navy/5 bg-white p-8 text-center">
+              <p className="text-sm font-bold uppercase tracking-wide text-red-500/80 font-[family-name:var(--font-inter)]">
+                Internal Problem
+              </p>
+              <p className="mt-3 text-base leading-relaxed text-slate font-[family-name:var(--font-inter)]">
+                &ldquo;I&apos;m tired of sponsors who don&apos;t invest their
+                own capital alongside mine.&rdquo;
+              </p>
+            </div>
+            <div className="rounded-lg border border-navy/5 bg-white p-8 text-center">
+              <p className="text-sm font-bold uppercase tracking-wide text-red-500/80 font-[family-name:var(--font-inter)]">
+                Philosophical Problem
+              </p>
+              <p className="mt-3 text-base leading-relaxed text-slate font-[family-name:var(--font-inter)]">
+                &ldquo;Capital should be deployed with discipline &mdash; not
+                chasing AUM.&rdquo;
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════ THE GUIDE (empathy + authority) ═══════════ */}
+      <section id="about" className="bg-white py-24 sm:py-28">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
+              We Understand
+            </p>
+            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
+              We Built Sago for Investors Like You
+            </h2>
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate sm:text-lg font-[family-name:var(--font-inter)]">
+              We know what it&apos;s like to deploy capital with a sponsor
+              and wonder if they care as much about your returns as their
+              management fees. That&apos;s why every principal invests personal
+              capital alongside yours &mdash; and why we built a platform
+              designed for execution, not asset gathering.
+            </p>
+          </div>
+
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((service) => (
               <article
                 key={service.title}
-                className="group relative overflow-hidden rounded-lg bg-white p-8 shadow-sm shadow-navy/5 transition-shadow duration-300 hover:shadow-md hover:shadow-navy/10"
+                className="group relative overflow-hidden rounded-lg bg-warm-white p-8 shadow-sm shadow-navy/5 transition-shadow duration-300 hover:shadow-md hover:shadow-navy/10"
               >
-                {/* Gold accent line */}
                 <div
                   className="absolute inset-x-0 top-0 h-1 bg-accent"
                   aria-hidden="true"
                 />
-
                 <div className="text-navy/70 transition-colors duration-300 group-hover:text-accent">
                   {service.icon}
                 </div>
-
                 <h3 className="mt-6 text-xl font-bold text-navy font-[family-name:var(--font-nunito)]">
                   {service.title}
                 </h3>
-
                 <p className="mt-3 text-sm leading-relaxed text-slate font-[family-name:var(--font-inter)]">
                   {service.description}
                 </p>
@@ -397,40 +335,84 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ──────────────── INVESTMENT THESIS PREVIEW ──────────────── */}
-      <section id="strategy" className="bg-navy py-24 sm:py-28">
+      {/* ═══════════ THE PLAN (3 steps) ═══════════ */}
+      <section className="bg-navy py-24 sm:py-28">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
+              Your Path Forward
+            </p>
+            <h2 className="mt-3 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
+              Three Steps to Partnering with Sago
+            </h2>
+          </div>
+
+          <div className="mt-16 grid gap-8 sm:grid-cols-3">
+            {PLAN_STEPS.map((step) => (
+              <div
+                key={step.step}
+                className="relative rounded-lg border border-white/10 bg-white/5 p-8 backdrop-blur-sm"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-accent text-lg font-bold text-accent font-[family-name:var(--font-inter)]">
+                  {step.step}
+                </div>
+                <h3 className="mt-5 text-lg font-bold text-white font-[family-name:var(--font-nunito)]">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/60 font-[family-name:var(--font-inter)]">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-14 text-center">
+            <Link
+              href="/contact"
+              className="inline-block rounded bg-accent px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
+            >
+              Start with Step One
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════ INVESTMENT THESIS (Guide's strategy) ═══════════ */}
+      <section id="strategy" className="bg-white py-24 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid items-start gap-16 lg:grid-cols-2 lg:gap-20">
-            {/* Left column */}
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
                 Investment Thesis
               </p>
-              <h2 className="mt-4 text-3xl font-bold leading-snug text-white sm:text-4xl lg:text-[2.75rem] lg:leading-snug font-[family-name:var(--font-nunito)]">
-                Since 2020, three non-negotiable criteria have governed every
-                deployment of capital.
+              <h2 className="mt-4 text-3xl font-bold leading-snug text-navy sm:text-4xl lg:text-[2.75rem] lg:leading-snug font-[family-name:var(--font-nunito)]">
+                Three non-negotiable criteria protect your capital &mdash; and
+                amplify your returns.
               </h2>
+              <p className="mt-5 text-base leading-relaxed text-slate sm:text-lg font-[family-name:var(--font-inter)]">
+                Every acquisition must satisfy all three. No exceptions, no
+                committee overrides, no style drift. This is how we&apos;ve
+                delivered a 30.9% realized net IRR since inception.
+              </p>
               <Link
                 href="/strategy"
                 className="mt-10 inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
               >
-                Learn Our Full Strategy
+                See Our Full Strategy
               </Link>
             </div>
 
-            {/* Right column - principles */}
             <div className="flex flex-col gap-10">
               {PRINCIPLES.map((principle) => (
                 <div key={principle.number} className="flex gap-5">
-                  {/* Numbered circle */}
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-accent text-sm font-bold text-accent font-[family-name:var(--font-inter)]">
                     {principle.number}
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white font-[family-name:var(--font-nunito)]">
+                    <h3 className="text-lg font-bold text-navy font-[family-name:var(--font-nunito)]">
                       {principle.title}
                     </h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-white/60 font-[family-name:var(--font-inter)]">
+                    <p className="mt-1.5 text-sm leading-relaxed text-slate font-[family-name:var(--font-inter)]">
                       {principle.description}
                     </p>
                   </div>
@@ -441,27 +423,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ──────────────── TRACK RECORD HIGHLIGHTS ──────────────── */}
-      <section id="portfolio" className="bg-white py-24 sm:py-28">
+      {/* ═══════════ SUCCESS (what investors achieve) ═══════════ */}
+      <section id="portfolio" className="bg-warm-white py-24 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Section header */}
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
               Track Record
             </p>
             <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
-              Proven Results for Our Partners
+              What Success Looks Like for Our Partners
             </h2>
+            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-slate sm:text-lg font-[family-name:var(--font-inter)]">
+              These aren&apos;t projections. These are realized exits &mdash;
+              capital returned, gains banked, and reinvested into the next
+              opportunity.
+            </p>
           </div>
 
-          {/* Deal cards */}
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {DEALS.map((deal) => (
               <article
                 key={deal.name}
                 className="overflow-hidden rounded-lg border border-navy/5 shadow-sm transition-shadow duration-300 hover:shadow-md"
               >
-                {/* Card header */}
                 <div className="bg-navy px-6 py-5">
                   <h3 className="text-lg font-bold tracking-wide text-white font-[family-name:var(--font-nunito)]">
                     {deal.name}
@@ -470,8 +454,6 @@ export default function Home() {
                     {deal.strategy}
                   </p>
                 </div>
-
-                {/* Card body */}
                 <div className="bg-white px-6 py-6">
                   <p className="stat-number text-3xl font-bold text-accent sm:text-4xl font-[family-name:var(--font-inter)]">
                     {deal.irr}
@@ -479,7 +461,6 @@ export default function Home() {
                   <p className="mt-0.5 text-xs font-medium uppercase tracking-widest text-slate font-[family-name:var(--font-inter)]">
                     Net IRR
                   </p>
-
                   <div className="mt-5 flex items-center justify-between border-t border-navy/5 pt-4">
                     <div>
                       <p className="text-base font-bold text-navy font-[family-name:var(--font-inter)]">
@@ -503,7 +484,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* CTA */}
           <div className="mt-14 text-center">
             <Link
               href="/portfolio"
@@ -515,64 +495,67 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ────────────────────── TEAM PREVIEW ────────────────────── */}
+      {/* ═══════════ FAILURE (what's at stake) ═══════════ */}
+      <section className="bg-navy-dark py-20 sm:py-24">
+        <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent/70 font-[family-name:var(--font-inter)]">
+            The Alternative
+          </p>
+          <h2 className="mt-4 text-2xl font-bold leading-snug text-white sm:text-3xl lg:text-4xl font-[family-name:var(--font-nunito)]">
+            What Happens When You Wait
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/60 sm:text-lg font-[family-name:var(--font-inter)]">
+            Every quarter you deploy capital into market-rate deals is a quarter
+            you&apos;re not capturing the basis advantage that off-market
+            sourcing provides. The Texas Triangle&apos;s growth window
+            won&apos;t stay open forever &mdash; and the operators who source
+            today will be the ones who return capital tomorrow.
+          </p>
+        </div>
+      </section>
+
+      {/* ═══════════ TEAM PREVIEW (Guide's team) ═══════════ */}
       <section id="team" className="bg-warm-gray py-24 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Section header */}
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
-              Our Team
+              Your Operating Partners
             </p>
             <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
-              Experienced. Disciplined. Invested.
+              Five Principals. Skin in Every Deal.
             </h2>
           </div>
 
-          {/* Team grid */}
-          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {TEAM.map((member) => (
               <article
                 key={member.name}
-                className="group flex flex-col items-center rounded-lg bg-white p-8 shadow-sm shadow-navy/5 transition-shadow duration-300 hover:shadow-md hover:shadow-navy/10"
+                className="group flex flex-col items-center rounded-lg bg-white p-6 shadow-sm shadow-navy/5 transition-shadow duration-300 hover:shadow-md hover:shadow-navy/10"
               >
-                {/* Photo placeholder */}
-                <div className="flex h-28 w-28 items-center justify-center rounded-full bg-navy/5 transition-colors duration-300 group-hover:bg-navy/10">
+                <div className="flex h-24 w-24 items-center justify-center rounded-full bg-navy/5 transition-colors duration-300 group-hover:bg-navy/10">
                   <svg
-                    width="36"
-                    height="36"
+                    width="32"
+                    height="32"
                     viewBox="0 0 36 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true"
                     className="text-navy/20"
                   >
-                    <circle
-                      cx="18"
-                      cy="13"
-                      r="6"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    />
-                    <path
-                      d="M6 32c0-6.627 5.373-12 12-12s12 5.373 12 12"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                    />
+                    <circle cx="18" cy="13" r="6" stroke="currentColor" strokeWidth="1.5" />
+                    <path d="M6 32c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                   </svg>
                 </div>
-
-                <h3 className="mt-5 text-lg font-bold text-navy font-[family-name:var(--font-nunito)]">
+                <h3 className="mt-4 text-base font-bold text-navy font-[family-name:var(--font-nunito)]">
                   {member.name}
                 </h3>
-                <p className="mt-1 text-sm font-medium text-slate font-[family-name:var(--font-inter)]">
+                <p className="mt-1 text-xs font-medium text-slate text-center font-[family-name:var(--font-inter)]">
                   {member.title}
                 </p>
               </article>
             ))}
           </div>
 
-          {/* CTA */}
           <div className="mt-14 text-center">
             <Link
               href="/team"
@@ -584,9 +567,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ──────────────── CTA / CONTACT SECTION ──────────────── */}
+      {/* ═══════════ DIRECT CTA (call to action) ═══════════ */}
       <section id="contact" className="relative bg-navy-dark py-24 sm:py-28">
-        {/* Subtle gradient overlay */}
         <div
           className="pointer-events-none absolute inset-0"
           aria-hidden="true"
@@ -597,20 +579,32 @@ export default function Home() {
         />
 
         <div className="relative z-10 mx-auto max-w-3xl px-6 text-center lg:px-8">
-          <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
-            Start the Conversation
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
+            Take the Next Step
+          </p>
+          <h2 className="mt-4 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
+            Your Capital Deserves a Seat at the Table
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/60 font-[family-name:var(--font-inter)]">
             We partner with family offices, HNW individuals, and institutional
-            allocators seeking differentiated exposure to Texas Triangle
-            commercial real estate.
+            allocators who are done settling for market-rate returns. If you
+            want direct access to off-market Texas Triangle CRE &mdash;
+            let&apos;s talk.
           </p>
-          <Link
-            href="/contact"
-            className="mt-10 inline-block rounded bg-accent px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
-          >
-            Explore Opportunities
-          </Link>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="/contact"
+              className="inline-block rounded bg-accent px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
+            >
+              Schedule a Call
+            </Link>
+            <Link
+              href="/portfolio"
+              className="inline-block rounded border border-white/30 px-10 py-4 text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:border-white hover:bg-white/5 font-[family-name:var(--font-inter)]"
+            >
+              Review Our Track Record
+            </Link>
+          </div>
         </div>
       </section>
     </>

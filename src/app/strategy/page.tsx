@@ -1,30 +1,48 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+/*
+ * ──────────────────────────────────────────────────────────────
+ *  STORYBRAND MAPPING — STRATEGY PAGE
+ *  Role: The Guide's Plan (detailed)
+ *
+ *  Hero     → "You need a strategy that protects downside and manufactures upside"
+ *  Problem  → Most sponsors buy marketed deals at market pricing (no edge)
+ *  Guide    → "We built a three-pillar strategy specifically to solve this"
+ *  Plan     → Three pillars in detail (sourcing → execution → appreciation)
+ *  Approach → How we execute (the operational details that give investors confidence)
+ *  Success  → Texas Triangle as the right market (where your capital works hardest)
+ *  CTA      → "Schedule a Call" (direct) + "Review Our Track Record" (transitional)
+ * ──────────────────────────────────────────────────────────────
+ */
+
 export const metadata: Metadata = {
   title: "Investment Strategy | Sago Capital",
   description:
-    "Sago Capital deploys a disciplined, three-pillar strategy targeting off-market industrial and office assets below replacement cost across the Texas Triangle and beyond.",
+    "A three-pillar strategy built to protect your downside and manufacture upside: off-market sourcing, basis reset through execution, and forced appreciation across the Texas Triangle.",
 };
 
 const PILLARS = [
   {
     number: 1,
     title: "Off-Market Sourcing Advantage",
+    subtitle: "Your capital enters at 40–60% of replacement cost",
     description:
-      "We run direct-to-owner campaigns across 200+ opportunities per quarter, bypassing marketed deal flow entirely. Our proprietary sourcing targets distressed sellers, estate situations, and corporate divestitures—acquiring assets at 40–60% of replacement cost. This basis advantage is the foundation of every investment we make.",
+      "We run direct-to-owner campaigns across 200+ opportunities per quarter, bypassing marketed deal flow entirely. Our proprietary sourcing targets distressed sellers, estate situations, and corporate divestitures — acquiring assets at 40–60% of replacement cost. This basis advantage is the foundation of every investment we make and the reason your downside is protected from day one.",
   },
   {
     number: 2,
     title: "Basis Reset Through Execution",
+    subtitle: "Distributions within 90 days of closing",
     description:
-      "We deploy aggressive lease-up strategies, targeted capex, and NNN conversions to reset the income profile of every acquisition within the first 12 months. Our vertically integrated platform—property management, leasing, and construction—allows us to execute without third-party drag. Investors historically receive distributions within 90 days of closing.",
+      "We deploy aggressive lease-up strategies, targeted capex, and NNN conversions to reset the income profile of every acquisition within the first 12 months. Our vertically integrated platform — property management, leasing, and construction — allows us to execute without third-party drag. Investors historically receive distributions within 90 days of closing.",
   },
   {
     number: 3,
     title: "Forced Appreciation Engine",
+    subtitle: "Manufactured alpha, not passive appreciation",
     description:
-      "We engineer value through mark-to-market rent rollovers, zoning arbitrage, entitlement work, and highest-and-best-use repositioning. Combined with our low cost-per-square-foot basis, these levers compress cap rates and drive outsized equity returns at disposition. This is not passive appreciation—it is manufactured alpha.",
+      "We engineer value through mark-to-market rent rollovers, zoning arbitrage, entitlement work, and highest-and-best-use repositioning. Combined with our low cost-per-square-foot basis, these levers compress cap rates and drive outsized equity returns at disposition. This is not passive appreciation — it is manufactured alpha.",
   },
 ];
 
@@ -32,7 +50,7 @@ const APPROACH_CARDS = [
   {
     title: "Direct-to-Owner Campaigns",
     description:
-      "Proprietary sourcing through direct mail, cold outreach, and broker networks that surface off-market deals before they reach the institutional market.",
+      "Proprietary sourcing through direct mail, cold outreach, and broker networks that surface off-market deals before they reach the institutional market. You get access to opportunities most investors never see.",
     icon: (
       <svg
         width="40"
@@ -64,7 +82,7 @@ const APPROACH_CARDS = [
   {
     title: "Speed & Certainty of Close",
     description:
-      "Pre-arranged capital structures and streamlined diligence allow us to close in 30–45 days, giving sellers the certainty they need and giving us a competitive edge over slower institutional buyers.",
+      "Pre-arranged capital structures and streamlined diligence allow us to close in 30–45 days. Sellers choose us over slower institutional buyers — and that speed gives your capital access to better basis positions.",
     icon: (
       <svg
         width="40"
@@ -108,7 +126,7 @@ const APPROACH_CARDS = [
   {
     title: "Vertically Integrated Execution",
     description:
-      "In-house property management, leasing, construction oversight, and accounting eliminate third-party friction and give us full lifecycle control of every asset from acquisition to disposition.",
+      "In-house property management, leasing, construction oversight, and accounting eliminate third-party friction. You get full lifecycle control of every asset — and the margin expansion that comes with it.",
     icon: (
       <svg
         width="40"
@@ -158,7 +176,7 @@ const TARGET_GEOGRAPHIES = [
 export default function StrategyPage() {
   return (
     <>
-      {/* ───────────────────────── PAGE HERO ───────────────────────── */}
+      {/* ───────────────────────── PAGE HERO (THE PROBLEM) ───────────────────────── */}
       <section className="relative flex min-h-[60vh] flex-col items-center justify-center bg-navy-dark">
         {/* Gradient overlay */}
         <div
@@ -172,13 +190,15 @@ export default function StrategyPage() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-32 pb-20 text-center lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
-            How We Invest
+            How We Protect &amp; Amplify Your Capital
           </p>
           <h1 className="mx-auto mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl font-[family-name:var(--font-nunito)]">
-            Investment Strategy
+            A Strategy Built for Downside Protection and Manufactured Upside
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl font-[family-name:var(--font-inter)]">
-            Three non-negotiable criteria govern every deployment of capital.
+            Most sponsors buy marketed deals at market pricing — and hope for
+            appreciation. We built a three-pillar strategy that eliminates hope
+            from the equation.
           </p>
         </div>
 
@@ -192,20 +212,21 @@ export default function StrategyPage() {
         />
       </section>
 
-      {/* ───────────────── INVESTMENT THESIS - THREE PILLARS ───────────────── */}
+      {/* ───────────────── INVESTMENT THESIS - THREE PILLARS (THE PLAN) ───────────────── */}
       <section className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Section header */}
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
-              Investment Thesis
+              The Plan
             </p>
             <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
-              Three Pillars of Our Strategy
+              Three Pillars That Protect Your Capital
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate sm:text-lg font-[family-name:var(--font-inter)]">
               Every acquisition must satisfy all three criteria. No exceptions,
-              no committee overrides, no style drift.
+              no committee overrides, no style drift. This is how your capital
+              stays protected.
             </p>
           </div>
 
@@ -243,6 +264,9 @@ export default function StrategyPage() {
                     <h3 className="mt-3 text-2xl font-bold text-navy sm:text-3xl lg:text-4xl font-[family-name:var(--font-nunito)]">
                       {pillar.title}
                     </h3>
+                    <p className="mt-2 text-sm font-semibold text-accent font-[family-name:var(--font-inter)]">
+                      {pillar.subtitle}
+                    </p>
                     <p className="mt-4 text-base leading-relaxed text-slate sm:text-lg font-[family-name:var(--font-inter)]">
                       {pillar.description}
                     </p>
@@ -254,17 +278,21 @@ export default function StrategyPage() {
         </div>
       </section>
 
-      {/* ──────────────────── OUR APPROACH ──────────────────── */}
+      {/* ──────────────────── HOW WE EXECUTE (GUIDE AUTHORITY) ──────────────────── */}
       <section className="bg-warm-white py-24 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Section header */}
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
-              Our Approach
+              Why This Works
             </p>
             <h2 className="mt-3 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
-              How We Execute
+              Operational Advantages Your Capital Benefits From
             </h2>
+            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate sm:text-lg font-[family-name:var(--font-inter)]">
+              Strategy without execution is just a pitch deck. Here&apos;s why our
+              investors trust us to deliver.
+            </p>
           </div>
 
           {/* Approach cards */}
@@ -297,24 +325,26 @@ export default function StrategyPage() {
         </div>
       </section>
 
-      {/* ──────────────────── TARGET MARKETS ──────────────────── */}
+      {/* ──────────────────── TARGET MARKETS (SUCCESS) ──────────────────── */}
       <section className="bg-navy py-24 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid items-start gap-16 lg:grid-cols-2 lg:gap-20">
             {/* Left column */}
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
-                Target Markets
+                Where Your Capital Works Hardest
               </p>
               <h2 className="mt-4 text-3xl font-bold leading-snug text-white sm:text-4xl lg:text-[2.75rem] lg:leading-snug font-[family-name:var(--font-nunito)]">
-                Where We Invest
+                The Texas Triangle: America&apos;s Growth Engine
               </h2>
               <p className="mt-5 text-base leading-relaxed text-white/70 sm:text-lg font-[family-name:var(--font-inter)]">
-                The Texas Triangle—Dallas–Fort Worth, Houston, San Antonio, and
-                Austin—is our primary hunting ground. We also pursue
-                opportunistic industrial and office acquisitions across the
-                Southeast and lower Midwest where we identify the same basis
-                advantage.
+                The Texas Triangle — Dallas–Fort Worth, Houston, San Antonio, and
+                Austin — is our primary hunting ground. Population growth,
+                corporate relocations, and infrastructure investment are driving
+                demand that hasn&apos;t been priced into secondary and tertiary
+                markets. We also pursue opportunistic industrial and office
+                acquisitions across the Southeast and lower Midwest where we
+                identify the same basis advantage.
               </p>
 
               {/* Geography tags */}
@@ -371,7 +401,7 @@ export default function StrategyPage() {
         </div>
       </section>
 
-      {/* ──────────────── CTA SECTION ──────────────── */}
+      {/* ──────────────── CTA SECTION (DIRECT + TRANSITIONAL) ──────────────── */}
       <section className="relative bg-warm-white py-24 sm:py-28">
         {/* Gold accent top border */}
         <div
@@ -381,22 +411,31 @@ export default function StrategyPage() {
 
         <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent font-[family-name:var(--font-inter)]">
-            Co-Investment
+            Next Step
           </p>
           <h2 className="mt-4 text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl font-[family-name:var(--font-nunito)]">
-            Seeking Co-Investment Partners
+            Your Capital Deserves a Disciplined Strategy
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-slate sm:text-lg font-[family-name:var(--font-inter)]">
             We co-invest meaningful GP capital alongside every limited partner.
             If you&apos;re seeking differentiated exposure to Texas Triangle
-            commercial real estate, let&apos;s talk.
+            commercial real estate with built-in downside protection, let&apos;s
+            talk.
           </p>
-          <Link
-            href="/contact"
-            className="mt-10 inline-block rounded bg-accent px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
-          >
-            Start the Conversation
-          </Link>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="/contact"
+              className="inline-block rounded bg-accent px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20 font-[family-name:var(--font-inter)]"
+            >
+              Schedule a Call
+            </Link>
+            <Link
+              href="/portfolio"
+              className="inline-block rounded border border-navy/20 px-10 py-4 text-sm font-semibold tracking-wide text-navy transition-all duration-300 hover:border-navy/40 hover:bg-navy/5 font-[family-name:var(--font-inter)]"
+            >
+              Review Our Track Record
+            </Link>
+          </div>
         </div>
       </section>
     </>

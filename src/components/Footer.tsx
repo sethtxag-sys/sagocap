@@ -63,7 +63,7 @@ export default function Footer() {
               />
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-white/60">
-              Industrial &amp; Office&ensp;|&ensp;Texas Triangle &amp; Beyond
+              Off-Market CRE&ensp;|&ensp;Texas Triangle &amp; Beyond
             </p>
           </div>
 
